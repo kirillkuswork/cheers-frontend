@@ -1,0 +1,107 @@
+@import '@/styles/mixins.scss';
+
+@media (hover: none) and (pointer: coarse) {
+  .leftArrow, .rightArrow {
+      display: none;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.contentWrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  transition: all 250ms ease-out;
+  -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
+  scrollbar-width: none;  /* hide scrollbar in Firefox */
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+/* hide scrollbar in webkit browser */
+.content::-webkit-scrollbar, .content::-webkit-scrollbar {
+  display: none;
+}
+
+.content > * {
+  width: auto;
+  flex-shrink: 0;
+}
+
+.show-1 > * {
+  width: 100%;
+}
+.show-2 > * {
+  width: calc(100% / 2);
+}
+.show-3 > * {
+  width: calc(100% / 3);
+}
+.show-4 > * {
+  width: calc(100% / 4);
+}
+.show-5 > * {
+  width: calc(100% / 5);
+}
+.show-6 > * {
+  width: calc(100% / 6);
+}
+
+.leftArrow, .rightArrow {
+  position: absolute;
+  z-index: 1;
+  top: 105px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: var(--white);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-primary);
+
+  svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.leftArrow {
+  left: 12px;
+
+  @include tabletSmall {
+    left: 4px;
+  }
+}
+
+.rightArrow {
+  right: 12px;
+
+  @include tabletSmall {
+    right: 4px;
+  }
+}

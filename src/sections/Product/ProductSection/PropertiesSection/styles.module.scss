@@ -1,0 +1,15 @@
+@import "src/shareds/styles/mixins";
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include tabletBig {
+    gap: 24px;
+  }
+
+  @include mobile {
+    gap: 20px;
+  }
+}

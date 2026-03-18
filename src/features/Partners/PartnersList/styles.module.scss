@@ -1,0 +1,21 @@
+@import '@/styles/mixins.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @include tabletSmall {
+    gap: 20px;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}

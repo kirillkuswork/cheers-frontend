@@ -1,0 +1,19 @@
+@import "@/styles/mixins.scss";
+
+.nav {
+  height: 38px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  @include mobile {
+    display: none;
+  }
+  @include tabletSmall {
+    display: none;
+  }
+  .navCol {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}

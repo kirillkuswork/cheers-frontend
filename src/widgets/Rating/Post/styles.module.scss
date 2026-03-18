@@ -1,0 +1,102 @@
+@import "@/shareds/styles/mixins";
+
+.modareate {
+    color: #fd5e13;
+    font-size: 14px;
+    @include tabletSmall {
+        font-size: 12px;
+    }
+}
+.rejected {
+    color: #fd5e13;
+    font-size: 14px;
+    @include tabletSmall {
+        font-size: 12px;
+    }
+}
+
+.wrapper {
+	padding: 48px;
+	border-radius: 16px;
+	background-color: var(--background);
+	display: flex;
+	flex-direction: column;
+    @include tabletSmall {
+        padding: 32px;
+    }
+    @include mobile {
+        padding: 32px;
+    }
+}
+
+.heading {
+	display: grid;
+	grid-template-columns: 72px 1fr auto;
+	align-items: center;
+	gap: 24px;
+    @include tabletSmall {
+        gap: 12px;
+    }
+    @include mobile {
+	    gap: 12px;
+    }
+	.mid {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+
+		.name {
+			@include text-18;
+		}
+	}
+
+	.right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .date {
+            
+            @include tabletSmall {
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
+                gap: 8px
+            }
+            @include mobile {
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
+                gap: 8px
+            }
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: #9499A2;
+            text-align: right;
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-family: Onest;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px; /* 133.333% */
+            white-space: nowrap;
+        }
+  }
+}
+
+.desc {
+  @include text-14;
+  margin-top: 48px;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+  align-self: flex-end;
+  margin-top: 24px;
+}
+
+.iconButton {
+  border-color: var(--additional);
+}

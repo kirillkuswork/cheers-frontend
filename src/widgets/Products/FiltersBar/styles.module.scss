@@ -1,0 +1,12 @@
+@import '@/styles/mixins.scss';
+
+.filtersBar {
+  padding: 8px 0;
+  border-radius: 24px;
+  background-color: var(--white);
+  height: fit-content;
+
+  @include tabletSmall {
+    display: none;
+  }
+}

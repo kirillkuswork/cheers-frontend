@@ -1,0 +1,64 @@
+@import '../../../shareds/styles/mixins.scss';
+
+.button {
+	background: none;
+	cursor: pointer;
+	text-decoration: none;
+	border: 2px solid var(--text-red);
+	border-radius: 24px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 20px;
+	transition: 0.2s;
+	@include desktop {
+		opacity: 1;
+	}
+	@include tabletBig {
+		opacity: 1;
+	}
+
+	@include tabletSmall {
+		margin-top: 80px;
+		height: 80px;
+	}
+
+	@include mobile {
+		opacity: 1;
+		padding: 0 20px;
+		height: 80px;
+		margin-top: 40px;
+	}
+
+	p {
+		display: inline-block;
+		color: var(--text-red);
+		font-family: "Heading Compressed Pro";
+		font-size: 22px;
+		line-height: 26px;
+		text-transform: uppercase;
+		margin: 0;
+		text-align: start;
+		width: 100px;
+
+		@include tabletSmall {
+			opacity: 1;
+			width: auto;
+		}
+	}
+
+	.icon {
+		width: 48px;
+		height: 48px;
+
+		@include tabletSmall {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	&:hover {
+		opacity: 0.6 !important;
+	}
+}

@@ -1,0 +1,8 @@
+include:
+  - project: 'vino/maintenance/common-pipeline'
+    ref: main
+    file: '.common-pipeline-template.yml'
+
+variables:
+  APPNAME: vino-frontend
+  NAMESPACE_SUFFIX: frontend

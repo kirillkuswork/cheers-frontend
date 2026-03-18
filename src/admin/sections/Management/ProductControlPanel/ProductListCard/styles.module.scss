@@ -1,0 +1,79 @@
+@import "src/shareds/styles/mixins";
+
+.listItem {
+  border: 1px solid var(--stroke-gray);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+
+  .leftBlock {
+    display: flex;
+    .imgWrapper {
+      position: relative;
+      width: 84px;
+      height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .img {
+        padding: 12px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .text {
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 372px;
+      gap: 4px;
+      .title {
+        @include text-14;
+        color: var(--text-secondary);
+        font-weight: 600;
+      }
+      .description {
+        @include text-12;
+        color: var(--gray2);
+      }
+    }
+    .ratings {
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+      color: var(--text-primary)
+    }
+  }
+
+  .rightBlock {
+    display: grid;
+    grid-template-columns: 1fr 115px;
+    align-items: center;
+    gap: 50px;
+    padding-right: 30px;
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      justify-content: flex-end;
+      .icon {
+        width: 24px;
+        height: 24px;
+        color: var(--gray2);
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+    .changes {
+      @include text-12;
+      color: var(--text-primary);
+    }
+  }
+}

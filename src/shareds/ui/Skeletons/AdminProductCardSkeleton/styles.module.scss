@@ -1,0 +1,32 @@
+@import '@/shareds/styles/mixins.scss';
+
+.wrapper {
+  border-radius: 8px;
+  width: 100%;
+  height: 98px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  .img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .title {
+      width: 150px;
+      height: 20px;
+      border-radius: 16px;
+    }
+    .subTitle {
+      width: 200px;
+      height: 16px;
+      border-radius: 16px;
+    }
+  }
+}

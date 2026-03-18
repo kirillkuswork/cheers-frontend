@@ -1,0 +1,29 @@
+@import '@/styles/mixins';
+
+.wrapper {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.heading {
+  padding: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .icon {
+    color: var(--white);
+  }
+}
+
+.title {
+  @include text-40;
+}
+
+.inner {
+  padding: 0 48px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

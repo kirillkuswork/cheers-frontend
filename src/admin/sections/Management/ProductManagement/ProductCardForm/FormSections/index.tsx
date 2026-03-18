@@ -1,0 +1,9 @@
+export { ProductNameForm } from './ProductNameForm';
+export { AboutProductForm } from './AboutProductForm';
+export { MainInformationForm } from './MainInformationForm';
+export { ProducerForm } from './ProducerForm';
+export { SynchronizationForm } from './SynchronizationForm';
+export { TasteCharacteristicsForm } from './TasteCharacteristicsForm';
+export { TasteNotesForm } from './TasteNotesForm';
+export { UploadPhotosForm } from './UploadPhotosForm';
+export { VisibilityForm } from './VisibilityForm';

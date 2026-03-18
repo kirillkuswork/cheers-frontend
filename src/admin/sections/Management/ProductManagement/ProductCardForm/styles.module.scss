@@ -1,0 +1,25 @@
+@import "src/shareds/styles/mixins";
+
+.outer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .inner {
+    display: grid;
+    grid-template-columns: 864px 1fr;
+    gap: 0;
+    position: relative;
+    height: 100%;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  .button {
+    width: 220px;
+  }
+}

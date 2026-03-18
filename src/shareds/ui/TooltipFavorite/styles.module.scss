@@ -1,0 +1,44 @@
+@import '@/styles/mixins.scss';
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--white);
+  width: 162px;
+  box-shadow: 0 4px 40px #2626261a;
+  padding: 16px;
+  border-radius: 8px;
+  transform: translate(-43%, 30px);
+  @include tabletSmall {
+    transform: translate(-78%, 30px);
+  }
+  &__title {
+    @include text-12;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  &__subtitle {
+    @include text-12;
+    margin-top: 4px;
+  }
+
+  &__button {
+    margin-top: 8px;
+    width: 100%;
+  }
+}
+
+.corner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 8px;
+  height: 4px;
+  transform: translate(-50%, -100%);
+  color: var(--white);
+  @include tabletSmall {
+    transform: translate(53px, -100%);
+  }
+}

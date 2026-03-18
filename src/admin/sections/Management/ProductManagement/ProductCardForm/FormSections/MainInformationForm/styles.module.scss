@@ -1,0 +1,7 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}

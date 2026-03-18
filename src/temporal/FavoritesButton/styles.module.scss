@@ -1,0 +1,14 @@
+@import '@/styles/mixins.scss';
+
+.wrapper {
+  position: relative;
+}
+
+.selected {
+  svg {
+    fill: var(--text-red);
+    path {
+      stroke: var(--text-red) !important;
+    }
+  }
+}

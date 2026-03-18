@@ -1,0 +1,12 @@
+@import '@/styles/mixins.scss';
+
+.wrapper {
+  @include text-12;
+  font-weight: 600;
+  background-color: var(--yellow);
+  border-radius: 8px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

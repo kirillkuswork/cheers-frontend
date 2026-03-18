@@ -1,0 +1,18 @@
+@import "@/styles/mixins.scss";
+
+.wrapper {
+  width: 100%;
+  padding: 48px;
+  background-color: var(--white);
+  border-radius: 24px;
+
+  @include tabletBig {
+    padding: 32px;
+  }
+  @include tabletSmall {
+    padding: 32px;
+  }
+  @include mobile {
+    padding: 20px;
+  }
+}

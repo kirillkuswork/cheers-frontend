@@ -1,0 +1,43 @@
+@import '@/shareds/styles/mixins.scss';
+
+.wrapper {
+  border-radius: 8px;
+  width: 100%;
+  height: 114px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .img {
+    width: 86px;
+    height: 86px;
+    padding: 7px 12px;
+    border-radius: 12px;
+  }
+  .price {
+    width: 82px;
+    height: 25px;
+    border-radius: 16px;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .title {
+      width: 130px;
+      height: 20px;
+      border-radius: 16px;
+    }
+    .subTitle {
+      width: 180px;
+      height: 16px;
+      border-radius: 16px;
+    }
+    .description {
+      width: 200px;
+      height: 16px;
+      border-radius: 16px;
+    }
+  }
+}

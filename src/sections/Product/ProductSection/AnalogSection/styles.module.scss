@@ -1,0 +1,14 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  padding: 24px;
+
+  @include mobile {
+    padding: 20px;
+  }
+}
+
+.grid {
+  grid-template-columns: 1fr;
+  gap: 24px;
+}

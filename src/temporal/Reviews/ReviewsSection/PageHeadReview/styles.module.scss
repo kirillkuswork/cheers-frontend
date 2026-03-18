@@ -1,0 +1,40 @@
+@import '@/styles/mixins.scss';
+
+.pageHeadReview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .title {
+    @include text-40;
+    line-height: 28px;
+  }
+
+  .tabs {
+    display: flex;
+    gap: 16px;
+  }
+  @include mobile {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+}
+
+.smallTitle{ 
+  color: #262626;
+  font-family: Onest;
+  font-size: 24px !important;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 116.667% */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  svg {
+    height: 24px;
+    path {
+      stroke: #262626
+    }
+  }
+}

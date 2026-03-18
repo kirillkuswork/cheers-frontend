@@ -1,0 +1,17 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .imagesWrapper {
+    display: flex;
+    gap: 24px;
+  }
+
+  .error {
+    color: var(--error);
+    @include text-12;
+  }
+}

@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  .link {
+    text-decoration: none;
+  }
+  .skeletonsList {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.blockingMessage {
+  padding: 48px 27px;
+}

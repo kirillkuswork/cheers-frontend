@@ -1,0 +1,15 @@
+@import "src/shareds/styles/mixins";
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.title {
+  @include text-32;
+  color: var(--text-primary);
+}
+.description {
+  @include text-14;
+  color: var(--gray2);
+}

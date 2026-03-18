@@ -1,0 +1,28 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .icon {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.skeleton {
+  border-radius: 12px;
+
+  &_l {
+    height: 60px;
+  }
+  &_m {
+    height: 56px;
+  }
+  &_s {
+    padding: 0 8px 0 12px;
+    height: 48px;
+  }
+}

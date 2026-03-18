@@ -1,0 +1,23 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .title {
+      @include text-18;
+      color: var(--text-primary);
+    }
+    .description {
+      @include text-14;
+      color: var(--gray2);
+    }
+  }
+
+}

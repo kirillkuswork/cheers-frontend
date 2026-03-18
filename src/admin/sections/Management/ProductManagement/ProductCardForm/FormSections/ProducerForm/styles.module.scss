@@ -1,0 +1,23 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .between {
+    text-align: center;
+    @include text-14;
+    color: var(--text-primary);
+  }
+  .column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .dropzone {
+    width: 100%;
+  }
+}

@@ -1,0 +1,73 @@
+@import "@/styles/mixins.scss";
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.dropdownList {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 20!important;
+  right: 0;
+  margin-top: 4px;
+  padding: 8px;
+  background: var(--white);
+  border-radius: 12px;
+  row-gap: 4px;
+  box-shadow: 0 4px 40px #2626261a;
+  max-height: 300px;
+  overflow-y: scroll;
+
+  .blockingMessage {
+    padding: 82px 24px;
+  }
+
+  .listItem {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 8px;
+    padding: 7px 12px;
+    cursor: pointer;
+    color: var(--text-primary);
+    @include text-14;
+
+    &:hover {
+      background: var(--background);
+    }
+  }
+
+  .fetching {
+    opacity: 0.2;
+  }
+
+  .active {
+    @extend .listItem;
+    color: var(--text-red);
+  }
+}
+.dropdownList::-webkit-scrollbar {
+  width: 4px;
+  transform: translateY(-10px);
+  position: relative;
+}
+.dropdownList::-webkit-scrollbar-thumb {
+  background: var(--additional);
+  border-radius: 2px;
+
+  &:hover {
+    background: var(--gray2);
+  }
+}
+
+
+.input {
+  cursor: pointer;
+  width: 100%;
+}
+.icon {
+  transform: rotateX(180deg)
+}

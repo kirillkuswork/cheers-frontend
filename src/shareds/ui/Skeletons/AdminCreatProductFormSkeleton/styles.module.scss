@@ -1,0 +1,30 @@
+@import "@/shareds/styles/mixins.scss";
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 864px;
+  gap: 24px;
+
+  .title {
+    width: 290px;
+    height: 28px;
+    border-radius: 12px;
+  }
+
+  .subTitle {
+    width: 210px;
+    height: 24px;
+    border-radius: 12px;
+  }
+
+  .itemWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .input {
+      width: 100%;
+      height: 64px;
+      border-radius: 12px;
+    }
+  }
+}

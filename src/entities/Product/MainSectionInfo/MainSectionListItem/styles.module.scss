@@ -1,0 +1,16 @@
+@import "src/shareds/styles/mixins";
+
+.descItem {
+	display: inline-grid;
+	grid-template-columns: 120px 1fr;
+	gap: 24px;
+	@include text-14;
+
+	.title {
+		color: var(--gray2);
+	}
+
+	@include mobile {
+		grid-template-columns: 150px 1fr;
+	}
+}

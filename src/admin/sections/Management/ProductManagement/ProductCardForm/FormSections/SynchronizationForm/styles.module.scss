@@ -1,0 +1,24 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+
+  .buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    .button {
+      width: 220px;
+      margin-top: 8px;
+    }
+    .syncDate {
+      @include text-12;
+      color: var(--gray2);
+    }
+  }
+}

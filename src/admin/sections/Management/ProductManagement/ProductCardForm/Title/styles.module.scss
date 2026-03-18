@@ -1,0 +1,7 @@
+@import "src/shareds/styles/mixins";
+
+.title {
+  @include text-24;
+  line-height: 28px;
+  color: var(--text-primary);
+}

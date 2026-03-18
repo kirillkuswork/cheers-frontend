@@ -1,0 +1,44 @@
+@import "@/shareds/styles/mixins";
+
+.wrapper {
+	display: grid;
+	gap: 16px;
+}
+
+.item {
+	display: grid;
+	grid-template-columns: 64px 1fr 16px;
+	gap: 16px;
+	align-items: center;
+
+	.left {
+		@include text-14;
+	}
+
+	.mid {
+		position: relative;
+		height: 100%;
+		overflow: hidden;
+
+		.grayLine {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			height: 1px;
+			border-radius: 2px;
+			background-color: var(--stroke-gray);
+		}
+
+		.redLine {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			height: 4px;
+			border-radius: 2px;
+			background-color: var(--stroke-red);
+		}
+	}
+}

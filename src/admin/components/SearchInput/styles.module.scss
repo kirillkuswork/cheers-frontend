@@ -1,0 +1,101 @@
+@import "@/styles/mixins.scss";
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.dropdownList {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+  right: 0;
+  margin-top: 4px;
+  background: var(--white);
+  border-radius: 12px;
+  row-gap: 4px;
+  box-shadow: 0 4px 40px #2626261a;
+  max-height: 350px;
+  overflow-y: scroll;
+  border: 16px solid var(--white);
+  padding: 1px;
+  .productSearch {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 0 1px var(--white);
+    border-bottom: 18px solid var(--white);
+  }
+  .empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+    text-align: center;
+    .title {
+      @include text-16;
+      width: 220px;
+      font-weight: bold;
+    }
+    .subtitle {
+      @include text-12;
+      width: 300px;
+    }
+    .button {
+      width: max-content;
+    }
+  }
+  .list {
+    padding: 0 8px;
+    .listItem {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      border-radius: 8px;
+      padding: 7px 12px;
+      cursor: pointer;
+      color: var(--text-primary);
+      @include text-14;
+
+      &:hover {
+        background: var(--background);
+      }
+    }
+
+    .fetching {
+      color: var(--gray);
+    }
+
+    .active {
+      @extend .listItem;
+      color: var(--text-red);
+    }
+  }
+}
+.dropdownList::-webkit-scrollbar {
+  width: 4px;
+  transform: translateY(-10px);
+  position: relative;
+}
+.dropdownList::-webkit-scrollbar-thumb {
+  background: var(--additional);
+  border-radius: 2px;
+
+  &:hover {
+    background: var(--gray2);
+  }
+}
+
+.input {
+  cursor: pointer;
+  width: 100%;
+}
+.disabledArrow {
+  color: rgba(38, 38, 38, 0.4);
+  cursor: inherit;
+}
+.icon {
+  transform: rotateX(180deg);
+}

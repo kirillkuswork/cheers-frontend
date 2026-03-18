@@ -1,0 +1,20 @@
+@import "src/shareds/styles/mixins";
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--white);
+  gap: 16px;
+
+  &:hover {
+    background-color: var(--background)
+  }
+
+  .title {
+    @include text-14;
+    color: var(--text-primary);
+  }
+}

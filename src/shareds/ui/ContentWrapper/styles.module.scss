@@ -1,0 +1,58 @@
+@import '@/styles/mixins.scss';
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 24px;
+	background-color: var(--white);
+	border-radius: 24px;
+	gap: 20px;
+
+	@include mobile {
+		border-radius: 16px;
+		padding: 20px;
+	}
+}
+
+.title {
+	@include desktop {
+		@include text-24;
+		line-height: 28px;
+	}
+
+	@include laptop {
+		@include text-24;
+		line-height: 28px;
+	}
+
+	@include tabletBig {
+		@include text-20;
+	}
+}
+
+.inner {
+	display: grid;
+	gap: 24px;
+
+	@include desktop {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+
+	@include laptop {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+
+	@include tabletBig {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	@include tabletSmall {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	@include mobile {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 16px;
+	}
+}

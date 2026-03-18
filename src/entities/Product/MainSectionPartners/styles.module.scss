@@ -1,0 +1,140 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include tabletSmall {
+    gap: 16px;
+  }
+}
+
+.info {
+  height: fit-content;
+  background-color: var(--background);
+  padding: 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include tabletSmall {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .price {
+      display: flex;
+      align-items: center;
+
+      .oldPrice {
+        @include text-14;
+        color: var(--gray2);
+        text-decoration: line-through;
+        margin-left: 12px;
+      }
+
+      .percent {
+        background: var(--text-gradient);
+        @include text-14;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-left: 8px;
+      }
+
+      .currentPrice {
+        @include text-24;
+        line-height: 28px;
+      }
+    }
+  }
+
+  .bottom {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    
+    .wishlist {
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--additional);
+      border-radius: 12px;
+
+      svg {
+        path {
+          stroke: var(--text-primary);
+        }
+      }
+    }
+  }
+
+}
+
+.promo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+
+    @include tabletSmall {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &_text {
+    @include text-16;
+    line-height: 26px;
+  }
+
+  &_description {
+    @include text-10;
+    color: var(--gray2);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  @include text-12;
+  color: var(--gray2);
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  &_text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    overflow: hidden;
+  }
+}
+
+.link {
+  text-decoration: none;
+
+  .button {
+    width: 100%;
+  }
+}

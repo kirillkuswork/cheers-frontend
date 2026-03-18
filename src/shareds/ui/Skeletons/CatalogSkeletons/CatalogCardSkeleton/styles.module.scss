@@ -1,0 +1,89 @@
+@import "@/shareds/styles/mixins.scss";
+
+.wrapper {
+  position: relative;
+  border-radius: 12px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+  height: 216px;
+  border: 1px solid transparent;
+  @include mobile {
+    padding: 20px;
+    height: 72px;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mobile {
+      display: flex;
+      justify-content: center;
+    }
+
+    .topItem {
+      width: 120px;
+      height: 24px;
+      border-radius: 18px;
+    }
+    .bottomItem {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    .bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+
+      @include mobile {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}
+
+.large {
+  height: 360px;
+  .left {
+    @include mobile {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  @include laptop {
+    height: 320px;
+  }
+  @include tabletBig {
+    height: 280px;
+  }
+  @include tabletSmall {
+    height: 240px;
+  }
+  @include mobile {
+    height: 240px;
+  }
+  .left > .bottomItem {
+    @include mobile {
+      display: flex;
+    }
+  }
+}

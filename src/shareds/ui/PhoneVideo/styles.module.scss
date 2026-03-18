@@ -1,0 +1,145 @@
+@import '../../../shareds/styles/mixins.scss';
+
+
+@keyframes video-block-animation {
+	from {
+		// transform: translateX(100vw);
+	}
+	to {
+		left: 0px;
+	}
+}
+
+.videoWrapper {
+	position: relative;
+	@include tabletBig {
+		// transform: translateX(0vw);
+	}
+	@include tabletSmall {
+		// transform: translateX(0vw);
+		margin: 80px 0;
+	}
+	@include mobile {
+		// transform: translateX(0vw);
+		margin: 40px 0;
+	}
+	@include laptop {
+		// transform: translateX(100vw);
+	}
+	@include desktop{
+		// transform: translateX(100vw);
+	}
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.videoPhone {
+    width: 345px;
+    height: 750px;
+
+	@include laptop {
+        width: 216px;
+        height: 468px;
+    }
+
+	@include tabletBig {
+        width: 262px;
+        height: 567px;
+    }
+
+	@include tabletSmall {
+        width: 314px;
+        height: 680px;
+    }
+
+    @include mobile {
+        width: 230px;
+        height: 500px;
+    }
+}
+
+.videoPhoneMask {
+	position: absolute;
+	@include desktop {
+		// left: 100vw;
+		width: 345px;
+		height: 725px;
+		border-radius: 22px;
+		overflow: hidden;
+		.baseVideo {
+			transform: translateY(-12px);
+		}
+		img {
+			transform: translateY(4px) !important;
+		}
+	}
+	@include laptop {
+		// left: 100vw;
+        width: 216px;
+        height: 457px;
+		border-radius: 17px;
+		overflow: hidden;
+		.baseVideo {
+			transform: translateY(-6px);
+		}
+    }
+
+	@include tabletBig {
+		left: 0vw;
+        width: 262px;
+        height: 556px;
+    }
+
+	@include tabletSmall {
+		left: 0vw;
+        width: 314px;
+        height: 665px;
+    }
+
+    @include mobile {
+		left: 0vw;
+        width: 230px;
+        height: 490px;
+    }
+}
+
+.videoBlockAnimation {
+	// animation: 2.5s ease-out 0s video-block-animation forwards;
+
+	@include tabletBig {
+		animation: none;
+	}
+	@include tabletSmall {
+		animation: none;
+	}
+	@include mobile {
+		animation: none;
+	}
+	
+}
+.baseVideo {
+	@include desktop {
+		width: 345px;
+		height: 750px;
+	}
+	@include laptop {
+        width: 216px;
+        height: 468px;
+    }
+
+	@include tabletBig {
+        width: 262px;
+        height: 567px;
+    }
+
+	@include tabletSmall {
+        width: 314px;
+        height: 680px;
+    }
+
+    @include mobile {
+        width: 230px;
+        height: 500px;
+    }
+}

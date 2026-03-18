@@ -1,0 +1,147 @@
+@import '../../../shareds/styles/mixins.scss';
+
+.modal {
+  :global {
+    .ant-modal-content {
+      border-radius: 20px;
+    }
+  }
+
+  &_heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  &_title {
+    color: #262626;
+    font-family: "Heading Compressed Pro";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+
+    @include mobile {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  &_close {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: var(--text-primary);
+    opacity: 0.5;
+  }
+
+  &_info {
+    color: #262626;
+    font-family: "GT Walsheim Pro";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    padding: 16px 0px;
+  }
+
+  &_additional {
+    color: rgba(38, 38, 38, 0.50);
+    font-family: "GT Walsheim Pro";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 24px;
+  }
+
+  &_footer {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  &_btn {
+    border-radius: 12px;
+    background: #F5304D;
+    display: flex;
+    height: 56px;
+    width: 100%;
+    padding: 0px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    font-family: "Heading Compressed Pro";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    /* 118.182% */
+    text-transform: uppercase;
+    margin-top: 40px;
+  }
+
+  &_input {
+    width: 100%;
+    height: 56px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: #F4F4F4;
+    outline: none !important;
+    border: none;
+    margin-top: 20px;
+
+    &:nth-of-type(1) {
+      margin-top: 40px;
+    }
+  }
+
+  &_close {
+    flex-shrink: 0;
+  }
+}
+
+.checkboxArea {
+  margin-top: 40px;
+}
+
+.checkbox {
+  position: absolute;
+  z-index: -1;
+  // opacity: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.fakeCheckbox {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.checkbox+.fakeCheckbox {
+  display: inline-flex;
+  user-select: none;
+  cursor: pointer;
+}
+
+.checkbox+.fakeCheckbox::before {
+  content: '';
+  display: flex;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #929192;
+  border-radius: 4px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.checkbox:checked+.fakeCheckbox::before {
+  background: no-repeat center url('../../../shareds/assets/icons/CheckmarkIcn.svg');
+  background-color: var(--text-red);
+  border-color: var(--text-red);
+  background-size: cover;
+}

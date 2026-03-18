@@ -1,0 +1,32 @@
+@import '@/styles/mixins.scss';
+
+.wrapper {
+	display: flex;
+	gap: 4px;
+	@include tabletSmall{
+		gap: 0px;
+	}
+	&_l {
+		gap: 8px;
+	}
+}
+
+.icon {
+	width: 20px;
+	height: 20px;
+
+  &_l {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.iconGray {
+	path {
+		fill: var(--additional)
+	}
+}
+
+.iconClickable {
+	cursor: pointer;
+}

@@ -1,0 +1,142 @@
+@import '../../../shareds/styles/mixins.scss';
+
+.wrapper {
+	width: 100%;
+	display: grid;
+	gap: 40px;
+}
+
+.item {
+	padding: 40px;
+	border-radius: 40px;
+	border: 1px solid var(--gray);
+	width: 100%;
+	max-width: 893px;
+	min-height: 400px;
+	margin-left: auto;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+
+	&:nth-of-type(2n) {
+		margin-left: 0;
+	}
+
+	&:nth-of-type(3) {
+		border: none;
+		background: linear-gradient(90deg, #FF660A 0%, #F11969 100%);
+		color: var(--white);
+
+		@include mobile {
+			.heading {
+				margin-top: 80px;
+			}
+		}
+	}
+
+	@include laptop {
+		max-width: 787px;
+		min-height: 356px;
+	}
+
+	@include tabletBig {
+		max-width: 773px;
+		min-height: 356px;
+	}
+
+	@include tabletSmall {
+		min-height: 340px;
+	}
+
+	@include mobile {
+		min-height: auto;
+		padding: 20px;
+		border-radius: 20px;
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.col {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		&:nth-of-type(2) {
+			justify-content: flex-start;
+			gap: 20px;
+		}
+	}
+
+	.heading {
+		font-family: "Heading Compressed Pro";
+		font-size: 48px;
+		line-height: 56px;
+		margin-top: 80px;
+
+		@include laptop {
+			font-size: 40px;
+			line-height: 44px;
+		}
+
+		@include mobile {
+			font-size: 32px;
+			line-height: 36px;
+			margin-top: 20px;
+		}
+	}
+
+	.icon {
+		width: 72px;
+		height: 72px;
+
+		@include laptop {
+			width: 64px;
+			height: 64px;
+		}
+
+		@include tabletSmall {
+			width: 48px;
+			height: 48px;
+		}
+	}
+
+	.note {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 20px;
+		font-size: 24px;
+		line-height: 32px;
+
+		@include laptop {
+			font-size: 20px;
+			line-height: 28px;
+		}
+
+		@include mobile {
+			gap: 10px;
+			font-size: 18px;
+			line-height: 24px;
+		}
+
+		.defis {
+			color: #F5304D;
+		}
+	}
+}
+
+.paragraph {
+	font-size: 24px;
+	line-height: 32px;
+
+	@include laptop {
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	@include mobile {
+		font-size: 18px;
+		line-height: 24px;
+	}
+}

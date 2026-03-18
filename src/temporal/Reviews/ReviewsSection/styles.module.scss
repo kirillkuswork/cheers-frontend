@@ -1,0 +1,41 @@
+@import '@/styles/mixins.scss';
+
+.reviewSection {
+  position: relative;
+  background-color: var(--white);
+  padding: 48px;
+  border-radius: 24px;
+  min-height: 300px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: minmax(384px, auto) 1fr;
+  @include tabletSmall {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  grid-auto-flow: dense;
+  row-gap: 48px;
+  column-gap: 48px;
+  &_head {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+  &_stat {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  &_list{
+    grid-column: 2;
+    grid-row: 2;
+    @include tabletSmall {
+      grid-column: 1;
+      grid-row: 3;
+    }
+    @include mobile {
+      grid-column: 1;
+      grid-row: 3;
+    }
+  }
+};

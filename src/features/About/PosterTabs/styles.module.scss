@@ -1,0 +1,127 @@
+@import '../../../shareds/styles/mixins.scss';
+
+.tabs {
+	position: relative;
+	overflow: hidden;
+	background-color: var(--text-primary);
+	height: 100%;
+	max-height: 750px;
+	padding: 40px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	@include desktop {
+		max-height: 544px;
+	}
+	@include tabletBig {
+		min-height: 720px;
+	}
+
+	@include tabletSmall {
+		min-height: 750px;
+	}
+
+	@include mobile {
+		min-height: 480px;
+		padding: 20px;
+	}
+}
+
+.nav {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 40px;
+	z-index: 1;
+
+	@include mobile {
+		gap: 20px;
+	}
+}
+
+.navItem {
+	background: none;
+	border: none;
+	color: var(--white);
+	cursor: pointer;
+	padding: 0;
+	font-family: "Heading Compressed Pro";
+	font-size: 28px;
+	line-height: 32px;
+	transition: .2s;
+
+	@include mobile {
+		font-size: 20px;
+		line-height: 32px;
+	}
+
+	&:hover {
+		color: var(--text-red);
+	}
+
+	&_active {
+		color: var(--text-red);
+	}
+}
+
+.info {
+	position: relative;
+	color: var(--white);
+	z-index: 1;
+	@include desktop {
+		max-height: 544px;
+	}
+}
+
+.background {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.title {
+	font-family: "Heading Compressed Pro";
+	font-size: 72px;
+	line-height: 76px;
+	margin: 0;
+
+	@include laptop {
+		font-size: 56px;
+		line-height: 60px;
+	}
+
+	@include tabletBig {
+		font-size: 64px;
+		line-height: 68px;
+	}
+
+	@include tabletSmall {
+		font-size: 56px;
+		line-height: 60px;
+	}
+
+	@include mobile {
+		font-size: 40px;
+		line-height: 44px;
+	}
+}
+
+.text {
+	margin-top: 24px;
+	margin-bottom: 0;
+	max-width: 450px;
+
+	@include tabletSmall {
+		@include text-16;
+	}
+
+	@include mobile {
+		margin-top: 16px;
+	}
+}

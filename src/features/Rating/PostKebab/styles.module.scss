@@ -1,0 +1,63 @@
+@import '@/styles/mixins.scss';
+
+.wrapper {
+  position: relative;
+}
+
+.iconButton {
+  transition: all 0.2s;
+  background-color: #fafafa;
+  &:hover {
+    transform: scale(1.1);
+    background-color: #ccd1d673;
+
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.popup {
+  width: 221px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 40px;
+  z-index: 20;
+  margin-top: 11px;
+  padding: 8px;
+  background: var(--white);
+  border-radius: 12px;
+  row-gap: 4px;
+  box-shadow: 0 4px 40px #2626261a;
+  transform: translateX(-100%);
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  gap: 24px;
+  border-radius: 8px;
+  padding: 0 20px;
+  cursor: pointer;
+  color: var(--text-primary);
+  @include text-14;
+
+  &:hover {
+    background: var(--background);
+  }
+
+  .active {
+    color: var(--text-red);
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}

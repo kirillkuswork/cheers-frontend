@@ -1,0 +1,15 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 48px;
+  row-gap: 16px;
+
+  @include tabletBig {
+    column-gap: 32px;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}

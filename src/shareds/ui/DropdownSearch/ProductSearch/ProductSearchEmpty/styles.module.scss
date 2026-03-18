@@ -1,0 +1,21 @@
+@import '@/styles/mixins.scss';
+
+.wrapper {
+  min-height: 224px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.title {
+  @include text-20;
+}
+
+.subtitle {
+  @include text-14;
+  width: 100%;
+  max-width: 432px;
+}

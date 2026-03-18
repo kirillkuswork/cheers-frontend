@@ -1,0 +1,105 @@
+@import '../../../shareds/styles/mixins.scss';
+
+.wrapper {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 310px 350px 310px;
+	justify-content: space-between;
+	align-items: flex-start;
+	grid-template-areas:
+		"info1 img info2";
+
+	@include laptop {
+		grid-template-columns: 373px 262px 373px;
+	}
+
+	@include tabletBig {
+		grid-template-columns: 261px 262px 261px;
+	}
+
+	@include tabletSmall {
+		grid-template-columns: auto;
+		grid-template-areas:
+			"img img"
+			"info1 info2";
+		row-gap: 80px;
+		column-gap: 40px;
+	}
+
+	@include mobile {
+		grid-template-areas:
+			"img"
+			"info1"
+			"info2";
+		row-gap: 40px;
+	}
+}
+
+.imageWrapper {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	grid-area: img;
+
+	@include laptop {
+		width: 262px;
+		height: 567px;
+		justify-self: center;
+	}
+
+	@include mobile {
+		width: 230px;
+		height: 498px;
+	}
+}
+
+.img {
+	@include laptop {
+		width: 262px;
+		height: 567px;
+	}
+
+	@include mobile {
+		width: 230px;
+		height: 498px;
+	}
+}
+
+.blackTooltip {
+	width: 296px;
+	height: 144px;
+
+	position: absolute;
+	top: 6%;
+	left: -33%;
+
+	@include laptop {
+		width: 232px;
+		height: 106px;
+		left: -20%;
+	}
+}
+
+.redTooltip {
+	width: 294px;
+	height: 116px;
+
+	position: absolute;
+	bottom: 33%;
+	right: -33%;
+
+	@include laptop {
+		width: 234px;
+		height: 92px;
+		right: -20%;
+	}
+}
+
+.infoBlock1 {
+	grid-area: info1;
+}
+
+.infoBlock2 {
+	grid-area: info2;
+}

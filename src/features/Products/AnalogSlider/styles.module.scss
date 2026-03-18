@@ -1,0 +1,17 @@
+@import '@/styles/mixins.scss';
+
+.carousel {
+  margin: 0 -12px;
+
+  @include mobile {
+    margin: 0 -10px;
+  }
+}
+
+.link {
+  padding: 0 12px;
+
+  @include mobile {
+    padding: 0 10px;
+  }
+}

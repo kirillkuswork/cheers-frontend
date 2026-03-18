@@ -1,0 +1,14 @@
+@import '@/styles/mixins';
+
+.wrapper {
+  border-radius: 30px;
+  width: 200px;
+  height: 28px;
+
+  @include tabletBig {
+    height: 24px;
+  }
+  @include mobile {
+    width: 160px;
+  }
+}

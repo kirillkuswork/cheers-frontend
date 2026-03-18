@@ -1,0 +1,36 @@
+@import "src/shareds/styles/mixins";
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: column;
+  gap: 24px;
+
+  .wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: 8px;
+
+    .percent {
+      max-width: 109px;
+    }
+    .buttonWrapper {
+      display: flex;
+      align-content: flex-end;
+      margin-top: 4px;
+      .formButton {
+        color: var(--text-primary);
+        width: 56px;
+        height: 56px;
+        svg {
+          width: 21px;
+          height: 20px;
+        }
+      }
+    }
+
+  }
+}
+
+

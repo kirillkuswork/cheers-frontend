@@ -1,0 +1,37 @@
+@import "src/shareds/styles/mixins";
+
+.title {
+  @include text-18;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
+
+  .img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .country {
+    @include text-12;
+    color: var(--gray2);
+  }
+}
+
+.description {
+  @include text-14;
+  display: inline-block;
+  line-height: 20px;
+  margin-top: 24px;
+}
+
+.descriptionFull {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

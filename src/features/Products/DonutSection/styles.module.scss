@@ -1,0 +1,46 @@
+@import "@/shareds/styles/mixins";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+
+  @include tabletBig {
+    gap: 32px;
+  }
+  @include tabletSmall {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "donut items"
+      "donut sliders";
+    justify-content: flex-start;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "donut"
+      "items"
+      "sliders";
+  }
+
+  .donut {
+    grid-area: donut;
+    @include tabletSmall {
+      align-self: flex-start;
+    }
+  }
+  .items {
+    width: inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    grid-area: items;
+
+    @include laptop {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

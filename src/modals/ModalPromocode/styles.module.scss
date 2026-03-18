@@ -1,0 +1,110 @@
+@import "src/shareds/styles/mixins";
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include mobile {
+    gap: 16px;
+  }
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .title {
+    @include text-24;
+    line-height: 36px;
+    text-align: center;
+
+    @include tabletSmall {
+      @include text-20;
+    }
+  }
+
+  .imgWrapper {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.mid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .description {
+    @include text-10;
+    color: var(--gray2);
+  }
+
+  .input {
+    display: grid;
+    grid-template-columns: 1fr 32px;
+    gap: 8px;
+    align-items: center;
+    height: 64px;
+    background: var(--background);
+    border-radius: 12px;
+    padding: 0 8px 0 16px;
+
+    .promo {
+      text-transform: uppercase;
+      @include text-16;
+    }
+    
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      svg {
+        path {
+          stroke: var(--text-primary);
+        }
+      }
+    }
+
+    .iconCheck {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .link {
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,13 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  display: flex;
+
+  .toggle {
+    padding: 0;
+    gap: 24px;
+    span {
+      @include text-18;
+    }
+  }
+}

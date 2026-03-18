@@ -1,0 +1,14 @@
+@import '@/styles/mixins.scss';
+
+.wrapper {
+	max-width: 304px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	color: var(--text-primary);
+	@include text-32;
+
+	@include tabletBig {
+		gap: 16px;
+	}
+}

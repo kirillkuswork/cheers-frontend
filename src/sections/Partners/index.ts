@@ -1,0 +1,9 @@
+export { default as IntroSection } from './IntroSection';
+export { default as MarketSection } from './MarketSection';
+export { default as WhySection } from './WhySection';
+export { default as BusinessSection } from './BusinessSection';
+export { default as ServiceSection } from './ServiceSection';
+export { default as OutroSection } from './OutroSection';
+export { default as ShopSection } from './ShopSection';
+export { default as InternetSection } from './InternetSection';
+export { default as RoadmapSection } from './RoadmapSection';

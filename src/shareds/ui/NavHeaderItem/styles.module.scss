@@ -1,0 +1,12 @@
+@import '@/styles/mixins.scss';
+
+.item {
+	color: var(--gray2);
+	font-feature-settings: 'clig' off, 'liga' off;
+	@include text-14;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

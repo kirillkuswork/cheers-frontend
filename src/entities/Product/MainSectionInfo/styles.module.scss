@@ -1,0 +1,33 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+
+	@include mobile {
+		gap: 20px;
+	}
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	@include mobile {
+		gap: 12px;
+	}
+}
+
+.dropdowns {
+	display: grid;
+	grid-auto-columns: minmax(0, 1fr);
+	grid-auto-flow: column;
+	gap: 24px;
+
+	@include tabletSmall {
+		gap: 16px;
+	}
+}

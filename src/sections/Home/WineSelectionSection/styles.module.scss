@@ -1,0 +1,86 @@
+@import "src/shareds/styles/mixins";
+
+.inner {
+  @include desktop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include laptop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include tabletBig {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include mobile {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .card {
+    height: 200px !important;
+  }
+
+  .imgWrapper {
+    position: absolute;
+    top: 0;
+    right: 43px;
+    width: 204px;
+    height: 100%;
+
+    @include tabletBig {
+      top: 0;
+      right: 0;
+      width: 204px;
+      height: 100%;
+    }
+
+    @include tabletSmall {
+      top: 17px;
+      right: 0;
+      width: 170px;
+    }
+
+    @include mobile {
+      top: 32px;
+      right: -20px;
+      width: 140px;
+    }
+
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .firstImgWrapper {
+    width: 383px;
+    height: 383px;
+    top: -168px;
+    right: -50px;
+
+    @include tabletBig {
+      width: 383px;
+      height: 383px;
+      top: -168px;
+      right: -90px;
+    }
+
+    @include tabletSmall {
+      top: -110px;
+      right: -75px;
+      width: 310px;
+      height: 310px;
+    }
+
+    @include mobile {
+      top: -60px;
+      right: -75px;
+      width: 260px;
+      height: 260px;
+    }
+
+    .firstImg {
+      object-fit: contain;
+    }
+  }
+}

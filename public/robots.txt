@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://cheers.su
+
+# Sitemaps
+Sitemap: https://cheers.su/sitemap.xml

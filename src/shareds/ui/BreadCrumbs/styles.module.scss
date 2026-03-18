@@ -1,0 +1,23 @@
+@import "@/shareds/styles/mixins";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray2);
+  @include text-12;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--gray2);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.arrow {
+  width: 16px;
+  height: 16px;
+}

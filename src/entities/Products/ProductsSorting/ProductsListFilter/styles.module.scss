@@ -1,0 +1,18 @@
+@import "@/shareds/styles/mixins";
+
+.downUpIcon {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+}
+
+.sorted {
+  transform: rotateY(180deg);
+}
+
+.radioGroup {
+  padding: 0 20px;
+  .radio {
+    padding: 15px 0;
+  }
+}

@@ -1,0 +1,88 @@
+@import '@/styles/mixins.scss';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  @include text-14;
+  font-weight: 600;
+  color: #ffffff;
+
+  .icon {
+    display: flex;
+    align-items: center;
+    path {
+      stroke: #ffffff;
+    }
+  }
+
+  &_primary {
+    background: linear-gradient(140deg, #fd5e13 0%, #f0146f 100%);
+  }
+
+  &_secondary {
+    background: var(--text-primary);
+  }
+
+  &_tertiary {
+    background: transparent;
+    color: var(--text);
+    box-shadow: inset 0 0 0 1px #eceff2;
+    .icon {
+      path {
+        stroke: var(--text);
+      }
+    }
+  }
+
+  &_quaternary{
+    background: var(--background);
+    color: var(--text);
+  }
+
+  &_small {
+    padding: 0 16px;
+    height: 32px;
+    column-gap: 8px;
+    border-radius: 8px;
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &_medium {
+    padding: 0 20px;
+    height: 40px;
+    column-gap: 8px;
+    border-radius: 8px;
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &_large {
+    padding: 0 24px;
+    height: 48px;
+    border-radius: 12px;
+    column-gap: 12px;
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+    &_iconButton {
+      padding: 0;
+      height: 48px;
+      width: 48px;
+    }
+  }
+
+  &_disabled {
+    cursor: default;
+    background: var(--gray);
+  }
+}

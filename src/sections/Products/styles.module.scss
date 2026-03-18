@@ -1,0 +1,23 @@
+@import '@/styles/mixins.scss';
+
+.productsPageWrapper {
+  display: grid;
+  grid-template-columns: 318px 1fr;
+  width: 100%;
+  column-gap: 24px;
+  margin: 0 auto;
+
+
+  @include laptop {
+    grid-template-columns: 278px 1fr;
+  }
+  @include tabletBig {
+    grid-template-columns: 304px 1fr;
+  }
+  @include tabletSmall {
+    grid-template-columns: 1fr;
+  }
+  //@include mobile {
+  //  grid-template-columns: 1fr;
+  //}
+}

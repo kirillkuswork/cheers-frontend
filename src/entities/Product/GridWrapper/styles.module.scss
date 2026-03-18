@@ -1,0 +1,18 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 384px) 1fr;
+  gap: 48px;
+
+  @include laptop {
+    grid-template-columns: minmax(0, 331px) 1fr;
+  }
+  @include tabletBig {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  @include mobile {
+    gap: 20px;
+  }
+}

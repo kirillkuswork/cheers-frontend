@@ -1,0 +1,13 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .icon {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+}

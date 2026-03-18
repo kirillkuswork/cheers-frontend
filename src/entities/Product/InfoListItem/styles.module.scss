@@ -1,0 +1,17 @@
+@import "src/shareds/styles/mixins";
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @include text-14;
+
+  .title {
+    color: var(--gray2);
+  }
+  .description {
+    line-height: 20px;
+    color: var(--text-primary);
+    font-weight: 400;
+  }
+}

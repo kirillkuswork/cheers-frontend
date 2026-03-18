@@ -1,0 +1,117 @@
+@import '../../../shareds/styles/mixins.scss';
+
+.info {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.title {
+	font-family: "Heading Compressed Pro";
+	font-size: 48px;
+	line-height: 56px;
+
+	@include laptop {
+		font-size: 40px;
+		line-height: 44px;
+	}
+
+	@include mobile {
+		font-size: 32px;
+		line-height: 36px;
+	}
+}
+
+.items {
+	font-size: 24px;
+	line-height: 32px;
+
+	@include laptop {
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	@include tabletSmall {
+		margin-top: 0px;
+	}
+
+	@include mobile {
+		margin-top: 16px;
+		margin-bottom: 0;
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+
+.item {
+	margin-top: 40px;
+	display: flex;
+	gap: 20px;
+
+	@include tabletBig {
+		margin-top: 20px;
+		gap: 16px;
+	}
+
+	@include tabletSmall {
+		margin-top: 40px;
+	}
+
+	@include mobile {
+		margin-top: 20px;
+	}
+
+	.number {
+		font-size: 48px;
+		line-height: 52px;
+		min-width: 32px;
+		font-family: "Heading Compressed Pro";
+		background: linear-gradient(90deg, #FF660A 0%, #F11969 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		text-align: center;
+
+		@include laptop {
+			font-size: 40px;
+			line-height: 44px;
+		}
+
+		@include mobile {
+			font-size: 32px;
+			line-height: 36px;
+		}
+	}
+
+	.text {
+		font-size: 18px;
+		line-height: 24px;
+		display: flex;
+		align-items: center;
+
+		@include laptop {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+}
+
+
+.button {
+	width: 100%;
+	margin-top: 128px;
+
+	@include laptop {
+		margin-top: 92px;
+	}
+
+	@include tabletBig {
+		margin-top: 48px;
+	}
+
+	@include tabletSmall {
+		display: none;
+	}
+}

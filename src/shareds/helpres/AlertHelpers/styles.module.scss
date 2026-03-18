@@ -1,0 +1,53 @@
+@import '@/styles/mixins.scss';
+
+.message {
+  max-width: 1344px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+
+  &>div {
+    padding: 16px !important;
+    border-radius: 12px !important;
+
+    @include tabletSmall {
+      width: 100%;
+    }
+  }
+
+  &>div>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+.success {
+  &>div {
+    background: #F1FFF4 !important;
+    border: 1px solid #C0ECD4;
+  }
+}
+
+.warning {
+  &>div {
+    background: #FFF9EE !important;
+    border: 1px solid #FFEAB3;
+  }
+}
+
+.error {
+  &>div {
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+    background: #FEF2F2 !important;
+    border: 1px solid #FFCCD2;
+  }
+
+  &>div>div {
+    gap: 6px;
+  }
+}

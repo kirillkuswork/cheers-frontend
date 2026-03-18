@@ -1,0 +1,14 @@
+@import '@/shareds/styles/mixins.scss';
+.wrapper {
+  width: 100%;
+  height: 440px;
+  border-radius: 16px;
+
+  @include tabletSmall {
+    height: 288px;
+  }
+
+  @include mobile {
+    height: 434px;
+  }
+}

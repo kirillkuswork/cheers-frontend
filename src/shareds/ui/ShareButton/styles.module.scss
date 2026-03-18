@@ -1,0 +1,84 @@
+@import "@/styles/mixins.scss";
+
+.wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.button {
+  background-color: var(--white);
+  border: 1px solid var(--stroke-gray);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  height: 32px;
+  border-radius: 8px;
+
+  @include tabletSmall {
+    padding: 4px;
+    height: auto;
+    gap: 0;
+
+    .label {
+      display: none;
+    }
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 16px;
+      height: 16px;
+
+      @include tabletSmall {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .label {
+    @include text-14;
+    font-weight: 600;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  width: 153px;
+  bottom: -100%;
+  left: 50%;
+  background: var(--white);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.16), 0px 24px 16px 0px rgba(0, 0, 0, 0.03), 0px 12px 12px 0px rgba(0, 0, 0, 0.04), 0px 4px 6px 0px rgba(0, 0, 0, 0.05);
+  padding: 12px 16px;
+  border-radius: 8px;
+  z-index: 10;
+  transform: translate(-50%, 50%);
+  @include text-12;
+  line-height: 20px;
+
+  @include tabletSmall {
+    left: 0%;
+    transform: translate(0%, 50%);
+  }
+}
+
+.corner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 8px;
+  height: 4px;
+  transform: translate(-50%, -100%);
+  color: var(--white);
+
+  @include tabletSmall {
+    left: 0%;
+    transform: translate(10px, -100%);
+  }
+}

@@ -1,0 +1,10 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  padding: 48px 14px;
+  width: 100%;
+  max-width: 972px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

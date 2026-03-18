@@ -1,0 +1,48 @@
+@import '@/styles/mixins.scss';
+
+.wrapper {
+	display: flex;
+
+	@include desktop {
+		@include flex();
+	}
+	@include laptop {
+		@include flex();
+	}
+	@include tabletBig {
+		@include flex();
+	}
+	@include tabletSmall {
+		@include flex();
+	}
+	@include mobile {
+		flex-direction: column;
+	}
+}
+
+.imgWrapper {
+	height: 144px !important;
+	width: 100% !important;
+	position: relative;
+	overflow: hidden;
+
+	@include desktop {
+		height: 284px !important;
+	}
+
+	@include laptop {
+		height: 248px !important;
+	}
+
+	@include tabletBig {
+		height: 198px !important;
+	}
+
+	@include tabletSmall {
+		height: 141px !important;
+	}
+
+	@include mobile {
+		height: 143px !important;
+	}
+}

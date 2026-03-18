@@ -1,0 +1,12 @@
+@import "src/shareds/styles/mixins";
+
+.sectionTitle {
+  @include text-24;
+  line-height: 28px;
+  display: flex;
+  justify-content: flex-start;
+
+  @include tabletBig {
+    @include text-20;
+  }
+}

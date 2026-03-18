@@ -1,0 +1,22 @@
+.white {
+  background: var(--white);
+}
+.grey {
+  background: var(--background);
+}
+
+.animation {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

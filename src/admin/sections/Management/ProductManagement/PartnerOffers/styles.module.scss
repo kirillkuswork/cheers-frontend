@@ -1,0 +1,14 @@
+.inner {
+  grid-template-columns: 864px 1fr;
+  gap: 0;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.blockingMessage {
+  padding: 105px 27px;
+}
+

@@ -1,0 +1,131 @@
+@import '@/styles/mixins.scss';
+
+.wrapper {
+	flex-grow: 1;
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.heading {
+	padding: 48px;
+
+	@include tabletBig {
+		padding: 32px;
+	}
+	@include mobile {
+		padding: 32px 20px 28px;
+	}
+}
+
+.headingImg {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 24px;
+
+	@include tabletBig {
+		grid-template-columns: 445px 1fr;
+	}
+	@include tabletSmall {
+		grid-template-columns: 360px 1fr;
+	}
+	@include mobile {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+}
+
+.title {
+	@include text-40;
+	margin-top: 16px;
+
+	@include tabletBig {
+		@include text-32;
+	}
+	@include tabletSmall {
+		@include text-32;
+	}
+	@include mobile {
+		@include text-24;
+	}
+}
+
+.titleNoMargin {
+	margin-top: 0px;
+}
+
+.subtitle {
+	@include text-16;
+	line-height: 24px;
+	color: var(--text-primary);
+
+	@include desktop {
+		margin-top: 24px;
+		max-width: 60%;
+	}
+	@include laptop {
+		margin-top: 24px;
+		max-width: 65%;
+	}
+	@include tabletBig {
+		max-width: 80%;
+		margin-top: 16px;
+	}
+	@include tabletSmall {
+		margin-top: 16px;
+		max-width: 100%;
+	}
+	@include mobile {
+		@include text-14;
+		line-height: 20px;
+		margin-top: 12px;
+		max-width: 100%;
+	}
+}
+
+.subtitleImg {
+	max-width: 500px;
+
+	@include laptop {
+		max-width: 90%;
+	}
+	@include tabletBig {
+		max-width: 100%;
+	}
+}
+
+.inner {
+	padding: 0 48px 48px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	gap: 24px;
+
+	@include tabletBig {
+		padding: 0 32px 32px;
+	}
+	@include mobile {
+		padding: 0;
+	}
+}
+
+.imgWrapper {
+	position: relative;
+	width: 100%;
+	height: 163px;
+	border-radius: 24px;
+	overflow: hidden;
+
+	.img {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}

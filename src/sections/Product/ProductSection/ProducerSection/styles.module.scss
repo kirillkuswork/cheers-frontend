@@ -1,0 +1,95 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  overflow: hidden;
+  @include mobile {
+    padding-bottom: 0;
+  }
+}
+
+.grid {
+  grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: 'title content img';
+  position: relative;
+
+  @include tabletBig {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'title img'
+    'content img';
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.list {
+	display: grid;
+	grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.title {
+  grid-area: title;
+}
+
+.content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include tabletBig {
+    gap: 24px;
+  }
+
+  @include mobile {
+    gap: 20px;
+  }
+}
+
+.img {
+  grid-area: img;
+  width: 384px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  bottom: -48px;
+
+  @include laptop {
+    width: 331px;
+  }
+
+  @include tabletBig {
+    width: 432px;
+  }
+
+  @include tabletSmall {
+    width: 304px;
+  }
+
+  @include mobile {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    bottom: 0;
+  }
+}
+
+.shortContent {
+  bottom: -130px;
+  width: 331px;
+
+  @include tabletBig {
+    bottom: -90px;
+  }
+
+  @include mobile {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    bottom: 0;
+  }
+}

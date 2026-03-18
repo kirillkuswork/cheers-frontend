@@ -1,0 +1,90 @@
+@import '../../../shareds/styles/mixins.scss';
+
+@keyframes title-animation {
+	from {
+	  transform: translateX(100vw);
+	}
+	to {
+	  transform: translateX(-100vw);
+	}
+}
+
+@keyframes appear-animation {
+	from {
+	  transform: translateY(150%);
+	  opacity: 1;
+	}
+	to {
+	  transform: translateY(0);
+	  opacity: 1;
+	}
+}
+
+.titleAnimation {
+	// animation: 3s linear 0s title-animation;
+
+	@include tabletBig {
+		animation: none;
+	}
+}
+
+.appearAnimation {
+	// animation: 1.5s ease-out 3s appear-animation;
+	// animation-fill-mode: both;
+
+	@include tabletBig {
+		animation: none;
+	}
+}
+
+.overflow {
+	display: inline-block;
+	overflow: hidden;
+}
+
+.wrapper {
+	width: 100%;
+    display: grid;
+    grid-template-columns: 310px 426px 310px;
+    justify-content: space-between;
+	height: 100%;
+	max-height: 750px;
+	min-height: 750px;
+
+	@include laptop {
+		grid-template-columns: 347px 314px 347px;
+	}
+
+	@include tabletBig {
+		min-height: 650px;
+		grid-template-columns: 261px 314px 261px;
+	}
+
+	@include tabletSmall {
+		display: flex;
+		flex-direction: column;
+		max-height: auto;
+		min-height: auto;
+	}
+}
+
+.tabs {
+	// opacity: 0;
+
+	@include tabletBig {
+		opacity: 1;
+	}
+}
+
+.text {
+	max-width: 193px;
+	padding-top: 80%;
+
+	p {
+		// opacity: 0;
+
+		@include tabletBig {
+			opacity: 1;
+		}
+	}
+}

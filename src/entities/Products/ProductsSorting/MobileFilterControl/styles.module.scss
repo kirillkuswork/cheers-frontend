@@ -1,0 +1,33 @@
+@import "@/styles/mixins.scss";
+
+@mixin flexAndGap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filtersWrapper {
+  @include flexAndGap;
+  .clickArea {
+    @include flexAndGap;
+    cursor: pointer;
+    .title {
+      @include text-14;
+    }
+  }
+
+  .counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Onest, sans-serif;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 600;
+    color: var(--white);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--text-red);
+  }
+}

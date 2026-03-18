@@ -1,0 +1,90 @@
+@import '../../../shareds/styles/mixins.scss';
+
+.overflow {
+	overflow: hidden;
+}
+
+.info {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.textWrapper {
+	@include tabletSmall {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 40px;
+	}
+
+	@include mobile {
+		display: block;
+	}
+}
+
+.heading {
+	font-family: "Heading Compressed Pro";
+	font-size: 48px;
+	line-height: 52px;
+	margin: 0;
+	overflow: hidden;
+	// opacity: 0;
+
+	@include laptop {
+		font-size: 40px;
+		line-height: 44px;
+	}
+
+	@include tabletBig {
+		opacity: 1;
+	}
+
+	@include mobile {
+		max-width: 250px;
+		margin-top: 40px;
+		font-size: 32px;
+		line-height: 36px;
+		opacity: 1;
+	}
+}
+
+.subheading {
+	font-size: 24px;
+	line-height: 32px;
+	opacity: 0;
+	margin-top: 24px;
+
+	@include laptop {
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	@include tabletBig {
+		opacity: 1;
+	}
+
+	@include tabletSmall {
+		margin-top: 0px;
+	}
+
+	@include mobile {
+		margin-top: 16px;
+		margin-bottom: 0;
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+
+
+.button {
+	width: 270px;
+
+	@include tabletSmall {
+		display: none;
+	}
+}
+
+.transparent {
+	opacity: 0;
+}

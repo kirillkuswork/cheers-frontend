@@ -1,0 +1,21 @@
+@import "@/styles/mixins.scss";
+
+.productsContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 24px;
+  row-gap: 24px;
+  background-color: var(--white);
+  height: auto;
+
+  @include mobile {
+    padding: 20px;
+    gap: 20px;
+  }
+}
+
+.blockingMessage {
+  padding: 120px 0;
+  display: flex;
+}

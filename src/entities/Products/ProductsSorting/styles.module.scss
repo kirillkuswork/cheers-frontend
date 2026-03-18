@@ -1,0 +1,11 @@
+@import '@/styles/mixins.scss';
+
+.productsSorting {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include tabletSmall {
+    justify-content: space-between;
+  }
+}

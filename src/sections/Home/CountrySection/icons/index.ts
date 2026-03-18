@@ -1,0 +1,12 @@
+export { default as OldWorldIcon } from './OldWorldIcon.svg';
+export { default as NewWorldIcon } from './NewWorldIcon.svg';
+export { default as ArgentinaIcon } from './ArgentinaIcon.svg';
+export { default as AustraliaIcon } from './AustraliaIcon.svg';
+export { default as ChileIcon } from './ChileIcon.svg';
+export { default as FranceIcon } from './FranceIcon.svg';
+export { default as GermanyIcon } from './GermanyIcon.svg';
+export { default as ItalyIcon } from './ItalyIcon.svg';
+export { default as PortugalIcon } from './PortugalIcon.svg';
+export { default as RussiaIcon } from './RussiaIcon.svg';
+export { default as SpainIcon } from './SpainIcon.svg';
+export { default as UsaIcon } from './UsaIcon.svg';

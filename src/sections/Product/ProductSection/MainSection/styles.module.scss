@@ -1,0 +1,54 @@
+@import "src/shareds/styles/mixins";
+
+.gridWrapper {
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: max-content 1fr;
+	row-gap: 40px;
+	grid-template-areas:
+		'img title partners'
+		'img info partners';
+
+	@include laptop {
+		grid-template-columns: 1fr minmax(0, 432px);
+		grid-template-areas:
+		'img title'
+		'img info'
+		'img partners';
+	}
+
+	@include tabletBig {
+		grid-template-columns: 1fr minmax(0, 432px);
+		gap: 32px;
+	}
+
+	@include tabletSmall {
+		grid-template-columns: 1fr minmax(0, 304px);
+		gap: 32px;
+	}
+
+	@include mobile {
+		grid-template-columns: 1fr;
+		gap: 20px;
+		grid-template-areas:
+		'title'
+		'img'
+		'info'
+		'partners';
+	}
+}
+
+.img {
+	grid-area: img;
+}
+
+.title {
+	grid-area: title;
+}
+
+.info {
+	grid-area: info;
+}
+
+.partners {
+	grid-area: partners;
+}

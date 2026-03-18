@@ -1,0 +1,20 @@
+@import '../../../shareds/styles/mixins.scss';
+
+.wrapper {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 40px;
+
+	@include tabletBig {
+		gap: 20px;
+	}
+
+	@include tabletSmall {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@include mobile {
+		grid-template-columns: 1fr;
+	}
+}

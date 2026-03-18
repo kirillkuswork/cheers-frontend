@@ -1,0 +1,109 @@
+@import '@/shareds/styles/mixins.scss';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+  grid-template-areas: 'title mid right';
+
+  @include tabletBig {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'title title'
+      'mid right';
+    gap: 32px;
+  }
+
+  @include tabletSmall {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'title'
+      'mid'
+      'right';
+  }
+
+  @include mobile {
+    gap: 20px;
+  }
+}
+
+.skeleton {
+  border-radius: 12px;
+}
+
+.left {
+  width: 135px;
+  height: 28px;
+  grid-area: title;
+}
+
+.mid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  grid-area: mid;
+}
+
+.right {
+  display: grid;
+  gap: 48px;
+  grid-area: right;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'round'
+    'taste'
+    'sliders';
+
+  @include tabletBig {
+    gap: 32px;
+  }
+
+  @include tabletSmall {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'round taste'
+      'round sliders';
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'round'
+      'taste'
+      'sliders';
+    gap: 20px;
+  }
+
+  .round {
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 100%;
+    position: relative;
+    grid-area: round;
+
+    div {
+      width: 65%;
+      padding-bottom: 65%;
+      border-radius: 100%;
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .tasteWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    grid-area: taste;
+  }
+
+  .sliderWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    grid-area: sliders;
+  }
+}

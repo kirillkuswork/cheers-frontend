@@ -1,0 +1,12 @@
+export { default as CashRegisterIcon } from './CashRegisterIcon.svg';
+export { default as DatabaseIcon } from './DatabaseIcon.svg';
+export { default as DetectiveIcon } from './DetectiveIcon.svg';
+export { default as LeftArrowIcon } from './LeftArrowIcon.svg';
+export { default as NavIcon } from './NavIcon.svg';
+export { default as RightArrowIcon } from './RightArrowIcon.svg';
+export { default as LeftArrowLaptopIcon } from './LeftArrowLaptopIcon.svg';
+export { default as RightArrowLaptopIcon } from './RightArrowLaptopIcon.svg';
+export { default as RightArrowMobileIcon } from './RightArrowMobileIcon.svg';
+export { default as LeftArrowTabletSmallIcon } from './LeftArrowTabletSmallIcon.svg';
+export { default as RightArrowTabletSmallIcon } from './RightArrowTabletSmallIcon.svg';
+export { default as LeftArrowMobileIcon } from './LeftArrowMobileIcon.svg';

@@ -1,0 +1,15 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  .row {
+    display: flex;
+    gap: 24px;
+
+    .productType {
+      max-width: 244px;
+    }
+  }
+}

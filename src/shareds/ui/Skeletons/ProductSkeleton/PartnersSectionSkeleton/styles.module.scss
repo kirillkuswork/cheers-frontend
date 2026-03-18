@@ -1,0 +1,14 @@
+@import '@/shareds/styles/mixins.scss';
+
+.skeleton {
+  border-radius: 12px;
+  height: 184px;
+
+  @include laptop {
+    height: 152px;
+  }
+
+  @include tabletSmall {
+    height: 292px;
+  }
+}

@@ -1,0 +1,16 @@
+@import "@/styles/mixins.scss";
+
+.button {
+  width: max-content;
+  stroke: var(--text-primary);
+}
+
+.rotateIcon {
+  transform: rotateX(180deg);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  stroke: var(--text-primary);
+}

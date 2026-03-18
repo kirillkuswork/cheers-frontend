@@ -1,0 +1,50 @@
+@import '@/styles/mixins.scss';
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 24px;
+	gap: 16px;
+	padding: 0 16px;
+	min-height: 40px;
+	cursor: pointer;
+	border-radius: 8px;
+	align-items: center;
+
+	@include tabletSmall {
+		padding: 0 10px 0 16px;
+	}
+
+	.text {
+		display: flex;
+		align-items: center;
+		@include text-14;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.delete {
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		display: none;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		color: var(--gray2);
+		width: 24px;
+		height: 24px;
+
+		@include tabletBig {
+			display: flex;
+		}
+	}
+
+	&:hover {
+		background-color: var(--background);
+
+		.delete {
+			display: flex;
+		}
+	}
+}

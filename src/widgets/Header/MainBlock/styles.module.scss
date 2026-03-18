@@ -1,0 +1,84 @@
+@import "@/styles/mixins.scss";
+
+.logo {
+  background: none;
+  border: none;
+  cursor: pointer;
+  object-fit: cover;
+  display: block;
+  width: 102px;
+  height: 44px;
+  @include tabletBig {
+    width: 75px;
+    height: 40px;
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--white);
+}
+
+.main {
+  padding: 24px 0;
+  column-gap: 24px;
+  display: grid;
+  grid-template-columns: 318px 1fr 318px;
+  align-items: center;
+
+  @include laptop {
+    grid-template-columns: 278px 1fr 278px;
+  }
+  @include tabletBig {
+    grid-template-columns: 222px 1fr 246px;
+  }
+  @include tabletSmall {
+    grid-template-columns: 75px 1fr 40px;
+    padding: 20px 0;
+  }
+  @include mobile {
+    grid-template-columns: 12px 1fr 40px;
+    column-gap: 16px;
+    padding: 12px 0;
+  }
+  .left {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @include tabletBig {
+      align-items: center;
+    }
+    @include tabletSmall {
+      align-items: flex-end;
+    }
+  }
+
+  .rightBlock {
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      color: var(--text-primary);
+      cursor: pointer;
+      outline: none;
+      background: transparent;
+      border: none;
+      padding: 0;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .text {
+        @include text-14;
+      }
+    }
+  }
+}

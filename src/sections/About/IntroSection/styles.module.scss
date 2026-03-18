@@ -1,0 +1,269 @@
+@import '../../../shareds/styles/mixins.scss';
+
+.section {
+  padding-top: 0;
+  margin-top: 0;
+  overflow: visible;
+  height: 100vh;
+  min-height: 600px;
+
+  @include laptop {
+    padding-bottom: 20px;
+  }
+
+  @include tabletBig {
+    padding-bottom: 40px;
+  }
+
+  @include mobile {
+    padding-bottom: 20px;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.title {
+  background: linear-gradient(90deg, #FF660A 0%, #F11969 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-family: "Heading Compressed Pro";
+  font-size: 112px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 104px;
+  transition: .2s;
+  max-width: 570px;
+  margin: 0;
+
+  @include laptop {
+    font-size: 88px;
+    line-height: 80px;
+  }
+
+  @include mobile {
+    font-size: 56px;
+    line-height: 60px;
+    max-width: 320px;
+  }
+}
+
+// .hidden {
+  // opacity: 0;
+  // transform: translateY(-60px);
+// }
+
+.subtitle {
+  max-width: 670px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 32px;
+  margin-bottom: 0px;
+  transition: .2s;
+
+  @include laptop {
+    font-size: 20px;
+    line-height: 28px;
+    max-width: 580px;
+  }
+
+  @include mobile {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 20px;
+  }
+}
+
+.button {
+  margin-top: 48px;
+  border-radius: 12px;
+  background: var(--text-red);
+  padding: 12px 24px;
+  color: var(--white);
+  text-decoration: none;
+  box-sizing: border-box;
+  display: block;
+  font-family: "Heading Compressed Pro";
+  font-size: 22px;
+  line-height: 26px;
+  /* 118.182% */
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  // height: 48px;
+  transition: .2s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  @include laptop {
+    margin-top: 40px;
+  }
+
+  @include tabletSmall {
+    font-size: 20px;
+  }
+}
+
+.image {
+  position: absolute;
+  transition: .5s;
+
+  &:nth-of-type(1) {
+    right: 27%;
+    bottom: -80px;
+
+    @include mobile {
+      right: 60px;
+      bottom: 80px;
+    }
+  }
+
+  &:nth-of-type(2) {
+    right: 10.9%;
+    top: -40px;
+
+    @include laptop {
+      width: 167px;
+      height: 254px;
+    }
+
+    @include tabletBig {
+      width: 147px;
+      height: 224px;
+    }
+
+    @include tabletSmall {
+      right: 0;
+    }
+
+    @include mobile {
+      width: 95px;
+      height: 145px;
+    }
+  }
+
+  &:nth-of-type(3) {
+    right: 0px;
+    top: 52.7%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &:nth-of-type(4) {
+    left: 10.7%;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    @include laptop {
+      width: 270px;
+      height: 412px;
+    }
+
+    @include tabletBig {
+      width: 231px;
+      height: 352px;
+      transform: translate(0);
+      top: 12%;
+      left: 0;
+    }
+
+    @include mobile {
+      top: 20%;
+      width: 128px;
+      height: 178px;
+    }
+  }
+}
+
+.imageHidden {
+  // opacity: 0;
+
+  @include tabletBig {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.quote {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: var(--text-gray);
+
+  .quoteIcon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+  }
+
+  @include tabletSmall {
+    @include text-16;
+    max-width: 331px;
+
+    .quoteIcon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @include mobile {
+    max-width: calc(100% - 72px);
+  }
+}
+
+.down {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: var(--text-gray);
+
+  .arrowDownIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  @include tabletSmall {
+    @include text-16;
+
+    .arrowDownIcon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @include mobile {
+    span {
+      display: none;
+    }
+  }
+}

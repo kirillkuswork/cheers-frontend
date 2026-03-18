@@ -1,0 +1,48 @@
+@import '@/styles/mixins.scss'; 
+
+.wrapper {
+	position: absolute;
+	width: 100%;
+	bottom: -8px;
+	left: 0;
+	background-color: var(--white);
+	transform: translateY(100%);
+	border-radius: 12px;
+	padding: 8px;
+	overflow-y: auto;
+}
+
+.link {
+	text-decoration: none;
+	color: inherit;
+}
+
+.top {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+	padding: 12px 16px 8px;
+
+	@include tabletSmall {
+		gap: 24px;
+	}
+
+	@include mobile {
+		padding: 16px;
+	}
+}
+
+.title {
+	@include text-20;
+}
+
+.clear {
+	@include text-14;
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	color: var(--gray2);
+	display: flex;
+	align-items: center;
+}

@@ -1,0 +1,36 @@
+@import "@/styles/mixins.scss";
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-primary);
+  @include text-16;
+  line-height: 20px;
+  text-decoration: none;
+  padding: 0 32px;
+  height: 80px;
+  column-gap: 16px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--stroke-gray);
+
+  @include mobile {
+    height: 64px;
+    padding: 0 20px;
+    @include text-14;
+  }
+
+  .button {
+    color: var(--text-primary);
+  }
+}
+
+.mainItem {
+  font-weight: 600;
+}
+
+.subItem {
+  color: var(--gray2);
+}

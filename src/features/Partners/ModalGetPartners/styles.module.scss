@@ -1,0 +1,80 @@
+@import '../../../shareds/styles/mixins.scss';
+
+.modal {
+	:global {
+		.ant-modal-content {
+			border-radius: 20px;
+		}
+	}
+
+	&_title {
+		color: #262626;
+		font-family: "Heading Compressed Pro";
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 40px;
+
+		@include mobile {
+			font-size: 28px;
+			line-height: 36px;
+		}
+	}
+
+	&_info {
+		color: #262626;
+		font-family: "GT Walsheim Pro";
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 28px;
+		padding: 16px 0px;
+
+		@include mobile {
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+
+	&_additional {
+		color: var(--text-gray);
+		font-family: "GT Walsheim Pro";
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 350;
+		line-height: 24px;
+	}
+
+	&_footer {
+		margin-top: 40px;
+	}
+
+	&_btn {
+		border-radius: 12px;
+		background: #F5304D;
+		display: flex;
+		height: 56px;
+		padding: 0px 24px;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		border: none;
+		cursor: pointer;
+		color: #FFF;
+		font-family: "Heading Compressed Pro";
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 26px;
+		/* 118.182% */
+		text-transform: uppercase;
+
+		@include mobile {
+			width: 100%;
+		}
+	}
+}
+
+.wrapper {
+	max-width: 640px;
+}

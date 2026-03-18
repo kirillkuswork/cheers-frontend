@@ -1,0 +1,45 @@
+@import "src/shareds/styles/mixins";
+
+.dropdown {
+  position: relative;
+  .iconButton {
+    color: var(--text-primary);
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.wrapper {
+  position: absolute;
+  left: 60px;
+  top: 0;
+  padding: 8px;
+  border-radius: 16px;
+  background-color: var(--white);
+  box-shadow: 0 4px 40px #2626261a;
+
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    @include text-14;
+    padding: 12px 30px 12px 20px;
+
+    &:disabled {
+      color: rgba(38, 38, 38, 0.4);
+      .icon {
+        color: rgba(38, 38, 38, 0.4);
+      }
+    }
+
+    .icon {
+      color: var(--text-primary);
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

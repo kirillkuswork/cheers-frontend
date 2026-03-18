@@ -1,0 +1,28 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  display: flex;
+  gap: 8px;
+}
+.container {
+  padding: 0;
+}
+.codeInput {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  @include text-24;
+  line-height: 28px;
+  background-color: transparent;
+  transition: padding-top 0.1s ease-out, padding-bottom 0.1s ease-out;
+
+  &:disabled {
+    color: rgba(38, 38, 38, 0.4);
+  }
+  &[type="number"]::-webkit-outer-spin-button,
+  &[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}

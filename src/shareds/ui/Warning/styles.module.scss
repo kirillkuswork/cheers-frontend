@@ -1,0 +1,54 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 9px 16px;
+  border-radius: 12px;
+  gap: 12px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  width: 16px;
+  height: 17px;
+}
+
+.error {
+  box-shadow: inset 0 0 0 1px #FFCCD2;
+  background-color: #FEF2F2;
+}
+.success {
+  box-shadow: inset 0 0 0 1px #C0E5D1;
+  background-color: #F2FAF6;
+}
+.warning {
+  box-shadow: inset 0 0 0 1px #ffeab3;
+  background-color: #fff9ee;
+  color: #FFAD0D;
+}
+.info {
+  box-shadow: inset 0 0 0 1px #BDDDFF;
+  background-color: #F1F8FF;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--text-primary);
+
+  .title {
+    @include text-14;
+    font-weight: 600;
+  }
+  .description {
+    @include text-14;
+    line-height: 22px;
+  }
+}
+
+.withTitle {
+  padding-top: 2px;
+}

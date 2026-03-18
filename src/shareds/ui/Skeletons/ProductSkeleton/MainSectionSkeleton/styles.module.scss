@@ -1,0 +1,119 @@
+@import '@/shareds/styles/mixins.scss';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+
+  grid-template-areas:
+    'img title vidget'
+    'img info vidget';
+
+  @include tabletBig {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    grid-template-areas:
+      'img title'
+      'img info'
+      'img vidget';
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-template-areas:
+      'title'
+      'img'
+      'info'
+      'vidget';
+  }
+}
+
+.skeleton {
+  border-radius: 12px;
+}
+
+.left {
+  height: 520px;
+  grid-area: img;
+
+  @include mobile {
+    height: 320px;
+  }
+}
+
+.midTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  grid-area: title;
+
+  .rating {
+    display: flex;
+    gap: 24px;
+
+    .skeleton {
+      width: 120px;
+      height: 16px;
+    }
+  }
+
+  .title {
+    height: 132px;
+  }
+
+  @include tabletBig {
+    gap: 24px;
+  }
+
+  @include mobile {
+    gap: 20px;
+  }
+}
+
+.midInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  grid-area: info;
+
+  .props {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 16px;
+    column-gap: 24px;
+
+    .skeleton {
+      height: 18px;
+    }
+  }
+
+  .dropdown {
+    height: 64px;
+  }
+
+  @include tabletBig {
+    gap: 24px;
+  }
+
+  @include mobile {
+    gap: 20px;
+  }
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  grid-area: vidget;
+
+  .skeleton {
+    &:nth-of-type(1) {
+      height: 172px;
+    }
+
+    &:nth-of-type(2) {
+      height: 48px;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "./normalize.scss";
+@import "./fonts.scss";
+@import "./mixins.scss";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --text-primary: #262626;
+  --text-secondary: #363A47;
+  --text-gray: rgba(38, 38, 38, 0.5);
+  --text-red: #f5304d;
+  --background: #f5f7fa;
+  --secondary-background: #ECEFF3;
+  --background-gray: #f0f3f7;
+  --stroke-gray: #eceff2;
+  --stroke-gray2: #E0E0E0;
+  --white: #ffffff;
+  --gray: #e9e9e9;
+  --gray2: #9499a2;
+  --additional: #d7dbe0;
+  --stroke-red: #FB5322;
+  --stroke-yellow: #FF9D00;
+  --error: #F01414;
+  --success: #3AA981;
+  --yellow: #ffdd2d;
+  --header-height: 134px;
+  --text-gradient: linear-gradient(90deg, #fd5e13 0%, #f0146f 100%);
+
+  @include tabletSmall {
+    --header-height: 80px;
+  }
+  @include mobile {
+    --header-height: 64px;
+  }
+}
+
+body {
+  font-family: Onest, sans-serif;
+  color: var(--text-primary);
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.ant-message-top {
+  top: 47px !important;
+  z-index: 30;
+
+  @include tabletSmall {
+    top: 0 !important;
+  }
+}
+

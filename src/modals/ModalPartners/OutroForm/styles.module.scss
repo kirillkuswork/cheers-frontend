@@ -1,0 +1,79 @@
+@import '@/styles/mixins.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  .fields {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.title {
+  @include text-24;
+  max-width: 90%
+}
+
+.invalidLabel {
+  @include text-14;
+  color: var(--error);
+  margin-top: 4px;
+}
+
+.checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.fakeCheckbox {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.checkbox+.fakeCheckbox {
+  display: inline-flex;
+  user-select: none;
+  cursor: pointer;
+}
+
+.checkbox+.fakeCheckbox::before {
+  content: '';
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--additional);
+  border-radius: 4px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.checkbox:checked+.fakeCheckbox::before {
+  background: no-repeat center url('/images/checkmark.svg');
+  background-color: var(--text-red);
+  border-color: var(--text-red);
+}
+
+.link {
+  color: #262626;
+  text-decoration: none;
+  margin-left: -8px;
+  @include text-14;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}

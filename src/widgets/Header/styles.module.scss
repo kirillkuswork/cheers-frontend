@@ -1,0 +1,33 @@
+@import "@/styles/mixins.scss";
+
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 20;
+  background: var(--white);
+  transition: 0.3s;
+}
+
+.headerHidden {
+  transform: translateY(-100%);
+}
+
+.inner {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px;
+  @include tabletBig {
+    padding: 0 32px;
+  }
+  @include tabletSmall {
+    padding: 0 32px;
+  }
+  @include mobile {
+    padding: 0 20px;
+  }
+}

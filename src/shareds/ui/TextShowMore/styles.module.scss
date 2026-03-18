@@ -1,0 +1,25 @@
+@import "../../styles/mixins";
+
+.textWrapper {
+  overflow: hidden;
+}
+
+.textWrapperMaxContent {
+  position: relative;
+  height: max-content !important;
+}
+
+.text {
+	@include text-14;
+	display: inline-block;
+  max-width: 100%;
+  max-width: 720px;
+  line-height: 20px;
+}
+
+.button {
+  cursor: pointer;
+  @include text-14;
+  font-weight: 600;
+  margin-top: 16px;
+}

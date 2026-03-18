@@ -1,0 +1,83 @@
+@import '../../styles/mixins.scss';
+
+.container {
+    @include mobile {
+        height: fit-content;
+        overflow: auto;
+    }
+    @include tabletSmall {
+        height: fit-content;
+        overflow: auto;
+    }
+    @include tabletBig {
+        height: fit-content;
+        overflow: auto;
+    }
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.slide {
+    @include mobile {
+        position: relative;
+    }
+    @include tabletSmall {
+        position: relative;
+    }
+    @include tabletBig {
+        position: relative;
+    }
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    transition: left 0.5s ease-out, right 0.5s ease-out;
+}
+.slideActive {
+    left: 0px;
+    top: 0px;
+
+}
+.slidePrev {
+    left: -100%;
+    @include mobile {
+        left: 0;
+    }
+    @include tabletSmall {
+        left: 0;
+    }
+    @include tabletBig {
+        left: 0;
+    }
+}
+.slideNext {
+    @include mobile {
+        left: 0;
+    }
+    @include tabletSmall {
+        left: 0;
+    }
+    @include tabletBig {
+        left: 0;
+    }
+    left: 100%;
+}
+.slideHidden {
+    @include mobile {
+        display: block;
+    }
+    @include tabletSmall {
+        display: block;
+    }
+    @include tabletBig {
+        display: block;
+    }
+    display: none;
+}

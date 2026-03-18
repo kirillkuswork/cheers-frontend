@@ -1,0 +1,15 @@
+@import '@/styles/mixins.scss';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .title {
+    @include text-24;
+  }
+  .description {
+    @include text-16;
+    line-height: 22px;
+  }
+}

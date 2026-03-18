@@ -1,0 +1,27 @@
+@import '../../../shareds/styles/mixins';
+
+.wrapper {
+  display: grid;
+  gap: 24px;
+}
+
+.productsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+
+  @include laptop {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include tabletSmall {
+    grid-template-columns: 1fr;
+  }
+  @include mobile {
+    gap: 20px;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,14 @@
+@import '@/styles/mixins.scss';
+
+.paper {
+  display: grid;
+  gap: 24px;
+
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+  }
+}
+

@@ -1,0 +1,17 @@
+.horizontalScrollContainer {
+    display: flex;
+    overflow-x: auto;
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-type: x mandatory;
+    &::-webkit-scrollbar {
+      display: none;  // скрывает скроллбар для чистоты дизайна
+    }
+}
+  
+.section {
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100vh;
+}

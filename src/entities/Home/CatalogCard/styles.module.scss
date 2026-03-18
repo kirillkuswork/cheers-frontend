@@ -1,0 +1,263 @@
+@import "@/styles/mixins.scss";
+
+.wrapper {
+  height: 240px !important;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  flex-grow: 1;
+
+  @include desktop {
+    height: 216px !important;
+  }
+
+  @include laptop {
+    height: 216px !important;
+  }
+
+  @include tabletBig {
+    height: 216px !important;
+  }
+
+  @include tabletSmall {
+    height: 216px !important;
+  }
+
+  @include mobile {
+    height: 72px !important;
+  }
+}
+
+.wrapperLarge {
+  @include desktop {
+    height: 360px !important;
+  }
+
+  @include laptop {
+    height: 320px !important;
+  }
+
+  @include tabletBig {
+    height: 280px !important;
+  }
+
+  @include tabletSmall {
+    height: 240px !important;
+  }
+  @include mobile {
+    height: 190px !important;
+  }
+
+  .button {
+    @include mobile {
+      display: flex;
+      left: 20px;
+      bottom: 20px;
+    }
+  }
+  .title {
+    @include mobile {
+      top: 20px;
+    }
+  }
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  @include mobile {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.icon {
+  position: absolute;
+
+  @include desktop {
+    @include icon();
+  }
+  @include laptop {
+    @include icon();
+  }
+  @include tabletBig {
+    @include icon();
+  }
+  @include tabletSmall {
+    @include icon();
+  }
+  @include mobile {
+    bottom: 20px;
+    right: 20px;
+    height: 32px;
+    svg {
+      height: 32px;
+    }
+  }
+}
+
+.bgIcon {
+  flex-shrink: 0;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 50%;
+
+  @include desktop {
+    width: 432px;
+    height: 432px;
+    top: 192px;
+    right: -101px;
+  }
+
+  @include laptop {
+    width: 378px;
+    height: 378px;
+    top: 168px;
+    right: -85px;
+  }
+
+  @include tabletBig {
+    width: 378px;
+    height: 378px;
+    top: 135px;
+    right: -50px;
+  }
+
+  @include tabletSmall {
+    width: 320px;
+    height: 320px;
+    top: 120px;
+    right: -80px;
+  }
+
+  @include mobile {
+    width: 320px;
+    height: 320px;
+    top: 90px;
+    right: -80px;
+  }
+}
+
+.bgIconLarge {
+  width: 432px;
+  height: 432px;
+  border-radius: 50%;
+  top: 48px;
+  right: -101px;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.title {
+  color: var(--text-primary);
+  font-style: normal;
+  font-weight: 600;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+
+  @include desktop {
+    @include text-20;
+  }
+
+  @include laptop {
+    @include text-20;
+  }
+
+  @include tabletBig {
+    left: 24px;
+    @include text-16;
+  }
+
+  @include tabletSmall {
+    left: 24px;
+    @include text-16;
+  }
+
+  @include mobile {
+    top: 26px;
+    left: 20px;
+    @include text-16;
+  }
+}
+
+.imgTitle {
+  @extend .title;
+  @include mobile {
+    top: 16px;
+    left: 20px;
+    @include text-16;
+  }
+}
+
+.button {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  border: 1px solid #ECEFF2;
+  @include mobile {
+    display: none;
+  }
+}
+
+.img {
+  position: absolute;
+
+  @include desktop {
+    top: 170px;
+    right: 0;
+  }
+
+  @include laptop {
+    top: 170px;
+    right: 0;
+  }
+
+  @include tabletBig {
+    top: 170px;
+    right: 0;
+  }
+
+  @include tabletSmall {
+    top: 170px;
+    right: 0;
+  }
+
+  @include mobile {
+    top: 32px;
+    right: 0;
+  }
+}
+
+.largeImg {
+  @include desktop {
+    top: 145px;
+    right: 15px;
+  }
+  @include laptop {
+    top: 125px;
+    right: 15px;
+  }
+  @include tabletBig {
+    top: 85px;
+    right: 45px;
+  }
+  @include tabletSmall {
+    top: 75px;
+    right: 0;
+  }
+  @include mobile {
+    top: 70px;
+    right: -8px;
+  }
+}

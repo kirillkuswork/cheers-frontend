@@ -1,0 +1,44 @@
+@import '@/styles/mixins.scss';
+
+.navItem {
+	text-decoration: none;
+	color: var(--text-primary);
+	text-transform: uppercase;
+	font-family: "Heading Compressed Pro";
+	font-size: 22px;
+	vertical-align: middle;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	span {
+		transform: translateY(1.5px);
+	}
+	@include mobile {
+		@include text-16;
+		gap: 6px;
+	}
+
+	&:hover {
+		color: var(--text-red);
+
+		path {
+			fill: var(--text-red);
+		}
+
+		rect {
+			stroke: var(--text-red);
+		}
+	}
+
+	svg {
+		width: 24px;
+		height: 24px;
+
+		@include mobile {
+			width: 20px;
+			height: 20px;
+		}
+
+		// transform: translateY(-2px);
+	}
+}

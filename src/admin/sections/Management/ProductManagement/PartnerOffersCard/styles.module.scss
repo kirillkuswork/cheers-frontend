@@ -1,0 +1,107 @@
+@import "src/shareds/styles/mixins";
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.listItem {
+  border: 1px solid var(--stroke-gray);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 114px;
+
+  .imgWrapper {
+    position: relative;
+    width: 116px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .img {
+      padding: 7px 12px;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .price {
+    @include flexCenter;
+    max-width: 82px;
+    width: 100%;
+    @include text-16;
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+  .text {
+    padding: 14px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 372px;
+    width: 100%;
+    gap: 8px;
+    .name {
+      @include text-14;
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+    .address {
+      @include text-12;
+      color: var(--text-primary);
+    }
+    .other {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      @include text-12;
+      color: var(--gray2);
+    }
+  }
+  .idNumber {
+    @include text-12;
+    color: var(--gray2);
+    max-width: 89px;
+    width: 100%;
+    @include flexCenter;
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 84px;
+    gap: 12px;
+
+    .icon {
+      @include flexCenter;
+      width: 24px;
+      height: 24px;
+      color: var(--gray2);
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  .changes {
+    padding: 7px;
+    max-width: 125px;
+    width: 100%;
+    gap: 4px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    @include text-12;
+
+    .from {
+      color: var(--gray2);
+    }
+    .to {
+      padding: 4px 8px;
+      border-radius: 8px;
+      background-color: var(--yellow);
+      color: var(--text-primary);
+    }
+  }
+}

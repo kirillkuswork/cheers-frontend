@@ -1,0 +1,20 @@
+@import '@/styles/mixins.scss';
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 15px 20px;
+  cursor: pointer;
+  color: var(--text-primary);
+  @include text-14;
+
+  &:hover {
+    background: var(--background);
+  }
+
+  .active {
+    color: var(--text-red);
+  }
+}

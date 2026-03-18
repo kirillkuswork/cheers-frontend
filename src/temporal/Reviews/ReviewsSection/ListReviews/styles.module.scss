@@ -1,0 +1,17 @@
+@import '@/styles/mixins.scss';
+
+.listReviews {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.empty {
+  @include tabletBig {
+    left: 50%
+  }
+  @include tabletSmall {
+    position: relative;
+    left: 0px;
+  }
+}

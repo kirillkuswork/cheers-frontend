@@ -1,0 +1,8 @@
+@import '@/styles/mixins.scss';
+
+.buttonStack {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}

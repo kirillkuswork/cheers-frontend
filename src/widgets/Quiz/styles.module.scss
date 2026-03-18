@@ -1,0 +1,28 @@
+@import "../../shareds/styles/mixins";
+.wrapper {
+  padding: 48px;
+  max-width: 440px;
+  width: 100%;
+
+  @include mobile {
+    max-width: 100%;
+  }
+}
+
+.label {
+  white-space: initial;
+  overflow: initial;
+}
+
+.radioWrapper {
+  overflow: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chipsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}

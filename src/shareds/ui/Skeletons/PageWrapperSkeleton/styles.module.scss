@@ -1,0 +1,44 @@
+@import '@/shareds/styles/mixins.scss';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+
+  @include tabletSmall {
+    grid-template-columns: 1fr 320px;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.title, .subtitle, .img {
+  border-radius: 20px;
+  background-color: rgba(148, 153, 162, 0.15);
+}
+
+.title {
+  width: 50%;
+  height: 24px;
+  margin-bottom: 24px;
+
+  @include mobile {
+    margin-bottom: 16px;
+  }
+}
+
+.subtitle {
+  height: 24px;
+  margin-top: 16px;
+
+  @include mobile {
+    margin-top: 12px;
+  }
+}
+
+.img {
+  height: 163px;
+}

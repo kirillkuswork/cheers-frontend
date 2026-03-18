@@ -1,0 +1,43 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  padding: 48px;
+  max-width: 972px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  gap: 24px;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 24px;
+    width: 100%;
+
+    .row {
+      display: flex;
+      gap: 24px;
+
+      .name {
+        max-width: 337px;
+      }
+      .price {
+        max-width: 153px;
+        width: 100%;
+      }
+      .date {
+        max-width: 261px;
+        width: 100%;
+      }
+    }
+  }
+
+  .buttonStack {
+    .button {
+      width: 235px;
+    }
+  }
+}

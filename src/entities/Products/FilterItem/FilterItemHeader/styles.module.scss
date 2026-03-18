@@ -1,0 +1,40 @@
+@import '@/styles/mixins.scss';
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 24px;
+  height: 48px;
+  row-gap: 24px;
+  cursor: pointer;
+
+  .title {
+    @include text-14;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    path {
+      stroke: var(--text-primary);
+    }
+  }
+
+  .closed {
+    transform: rotateX(180deg);
+    path {
+      stroke: var(--gray2);
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@mixin button-size($size) {
+  width: $size;
+  height: $size;
+  svg {
+    width: $size;
+    height: $size;
+  }
+}
+
+.buttonIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+
+  svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    path {
+      stroke: var(--gray2);
+    }
+  }
+
+  &:hover .icon path {
+    stroke: var(--text-primary);
+  }
+
+  &_extra-small {
+    @include button-size(12px);
+  }
+
+  &_small {
+    @include button-size(16px);
+  }
+
+  &_medium {
+    @include button-size(20px);
+  }
+
+  &_large {
+    @include button-size(24px);
+  }
+}

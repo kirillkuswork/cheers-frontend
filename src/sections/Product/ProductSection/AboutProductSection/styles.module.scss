@@ -1,0 +1,57 @@
+@import "src/shareds/styles/mixins";
+
+.gidWrapper {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "title content graph";
+
+  @include tabletBig {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    grid-template-areas:
+      "title title"
+      "content graph";
+  }
+  @include tabletSmall {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "content"
+      "graph";
+  }
+  @include mobile {
+    gap: 20px;
+  }
+
+  .title {
+    grid-area: title;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    grid-area: content;
+
+    @include tabletBig {
+      gap: 24px;
+    }
+    @include mobile {
+      gap: 20px;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-right: 24px;
+
+      @include mobile {
+        gap: 16px;
+      }
+    }
+  }
+  .graph {
+    grid-area: graph;
+  }
+}

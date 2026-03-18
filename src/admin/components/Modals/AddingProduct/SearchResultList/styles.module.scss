@@ -1,0 +1,34 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  background: var(--white);
+  border-radius: 12px;
+  max-height: 235px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  z-index: 10;
+  box-shadow: 0 4px 40px #2626261a;
+  bottom: -20px;
+}
+
+.inner {
+  overflow-y: scroll;
+  padding-right: 4px;
+  display: grid;
+  gap: 8px;
+}
+.inner::-webkit-scrollbar {
+  width: 4px;
+}
+.inner::-webkit-scrollbar-thumb {
+  background: var(--additional);
+  border-radius: 2px;
+
+  &:hover {
+    background: var(--gray2);
+  }
+}
+
+
+

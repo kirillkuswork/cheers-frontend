@@ -1,0 +1,49 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  position: sticky;
+  display: flex;
+  align-items: flex-end;
+  height: max-content;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 55px;
+  top: 0;
+
+  .indicators {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.text {
+  gap: 16px;
+  display: flex;
+  align-items: center;
+  @include text-16;
+  line-height: 24px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.indicator {
+  width: 26px;
+  height: 6px;
+  background: var(--gray2);
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.activeIndicator {
+  width: 46px;
+  height: 10px;
+  background: var(--error);
+}
+
+.active {
+  @include text-18;
+}

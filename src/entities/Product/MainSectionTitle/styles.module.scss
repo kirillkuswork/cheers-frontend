@@ -1,0 +1,67 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+	align-self: start;
+	display: grid;
+	gap: 40px;
+
+	@include tabletBig {
+		gap: 24px;
+	}
+
+	@include mobile {
+		gap: 12px;
+	}
+}
+
+.title {
+	@include text-40;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+
+	@include tabletBig {
+		@include text-32;
+	}
+
+	@include mobile {
+		@include text-24;
+	}
+}
+
+.heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px;
+
+	@include mobile {
+		gap: 20px;
+	}
+}
+
+.ratingWrapper {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+
+	@include mobile {
+		gap: 20px;
+	}
+
+	.rating {
+		@include text-14;
+		line-height: 16px;
+		color: var(--gray2);
+		display: flex;
+		gap: 8px;
+	
+		.ratingValue {
+			@include text-14;
+			line-height: 16px;
+			color: var(--text-primary)
+		}
+	}
+}

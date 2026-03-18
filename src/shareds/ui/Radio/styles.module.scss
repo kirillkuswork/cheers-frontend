@@ -1,0 +1,82 @@
+@import "@/styles/mixins.scss";
+
+.radio {
+  display: flex;
+  // column-gap: 12px;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.withLabel {
+  display: grid;
+  grid-template-columns: 1fr 22px;
+}
+
+.input {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+}
+
+.customRadio {
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--additional);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: none;
+    width: 6px;
+    height: 6px;
+    background-color: var(--white);
+    border-radius: 50%;
+  }
+}
+
+.red {
+  background-color: var(--text-red);
+  border-color: var(--text-red);
+}
+.black {
+  background-color: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+.input:checked + .customRadio,.red {
+  &::after {
+    display: block;
+  }
+}
+.input:checked + .customRadio,.black {
+  &::after {
+    display: block;
+  }
+}
+
+.label {
+  display: flex;
+  @include text-14;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 6px;
+  text-overflow: ellipsis;
+}
+
+.leftRadio {
+  grid-template-columns: 22px 1fr;
+  .label {
+    order: 2;
+    justify-content: flex-start;
+  }
+  .customRadio {
+    order: 1;
+  }
+}

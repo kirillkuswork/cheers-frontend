@@ -1,0 +1,82 @@
+@import '../../../shareds/styles/mixins.scss';
+
+@keyframes title-animation {
+	from {
+		transform: translateX(100vw);
+	}
+
+	to {
+		transform: translateX(-100vw);
+	}
+}
+
+@keyframes appear-animation {
+	from {
+		transform: translateY(150%);
+		opacity: 1;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.titleAnimation {
+	// animation: 3s linear 0s title-animation;
+
+	@include tabletBig {
+		animation: none;
+	}
+}
+
+.appearAnimation {
+	// animation: 1.5s ease-out 3s appear-animation;
+	// animation-fill-mode: both;
+
+	@include tabletBig {
+		animation: none;
+	}
+}
+
+.wrapper {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 310px 345px 310px;
+	justify-content: space-between;
+	// overflow: hidden;
+
+	@include laptop {
+		grid-template-columns: 310px 345px 347px;
+	}
+
+	@include tabletBig {
+		grid-template-columns: 261px 261px 261px;
+	}
+
+	@include tabletSmall {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.bonuses {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	padding-right: 40px;
+
+	@include laptop {
+		padding-right: 0px;
+	}
+
+	@include tabletSmall {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	@include mobile {
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+}

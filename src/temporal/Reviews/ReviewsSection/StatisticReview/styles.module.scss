@@ -1,0 +1,44 @@
+@import "@/shareds/styles/mixins";
+
+.statisticReview {
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+	padding: 48px;
+	border: 1px solid var(--stroke-gray);
+	border-radius: 16px;
+}
+
+.top {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	.avgRating {
+		@include text-40;
+    	min-width: 26px;
+	}
+
+	.topInfo {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+
+		.totalRatings {
+			@include text-12;
+			color: var(--gray2);
+		}
+	}
+}
+
+.rigth {
+	@include tabletSmall {
+		display: flex;
+		flex-direction: column;
+		gap: 8px
+	}
+	@include mobile {
+		display: flex;
+		flex-direction: column;
+		gap: 8px
+	}
+}

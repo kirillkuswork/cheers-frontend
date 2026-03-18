@@ -1,0 +1,16 @@
+@import "src/shareds/styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .row {
+    display: flex;
+    gap: 24px;
+
+    .textField {
+      max-width: 173px;
+    }
+  }
+}
