@@ -1,4 +1,4 @@
-# vino-frontend
+# Cheers
 
 Интернет-магазин по продаже алкогольных напитков
 - https://cheers.su/
