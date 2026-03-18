@@ -1,6 +1,4 @@
 # vino-frontend
 
-# Start
-
-1. npm install
-2. npm run start
+Интернет-магазин по продаже алкогольных напитков
+- https://cheers.su/
